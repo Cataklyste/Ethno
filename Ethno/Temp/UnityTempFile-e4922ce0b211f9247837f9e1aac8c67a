@@ -2,15 +2,13 @@
 -target:library
 -nowarn:0169
 -out:Temp/Assembly-CSharp.dll
--r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
--r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
--r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
--r:"C:/Program Files/Unity/Editor/Data\Managed/Mono.Cecil.dll"
--r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll"
--define:UNITY_5_2_2
+-r:E:/Programs/Editor/Data/Managed/UnityEngine.dll
+-r:E:/Programs/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
+-r:E:/Programs/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
+-r:E:/Programs/Editor/Data/Managed/UnityEditor.dll
+-r:E:/Programs/Editor/Data\Managed/Mono.Cecil.dll
+-r:E:/Programs/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll
+-define:UNITY_5_2_0
 -define:UNITY_5_2
 -define:UNITY_5
 -define:ENABLE_NEW_BUGREPORTER
@@ -80,5 +78,7 @@
 Assets/Scripts/Helpers/BootController.cs
 Assets/Scripts/Helpers/ControllerManager.cs
 Assets/Scripts/Helpers/SingletonScript.cs
--r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
--r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
+Assets/Scripts/IA/IA.cs
+Assets/Scripts/IA/Spawner.cs
+-r:E:\Programs\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll
+-r:E:\Programs\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll
