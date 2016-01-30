@@ -42,6 +42,11 @@ public class CharacterMove : MonoBehaviour
 
 		UpdatePath(position);
 	}
+
+	public void StopMove()
+	{
+		_haveToMove = false;
+	}
 #endregion
 
 #region Public Methods
@@ -65,7 +70,7 @@ public class CharacterMove : MonoBehaviour
 		{
 			if (_path.corners.Length - 1 <= _indexPath)
 			{
-				_haveToMove = false;
+				StopMove();
 			}
 			else
 			{
