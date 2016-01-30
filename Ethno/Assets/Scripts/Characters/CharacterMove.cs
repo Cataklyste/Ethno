@@ -23,7 +23,9 @@ public class CharacterMove : MonoBehaviour
 	#endregion
 
 #region MonoBehaviours
-	void Start()
+
+
+	public virtual  void Start()
 	{
 		_path = new NavMeshPath();
 	}
@@ -41,6 +43,8 @@ public class CharacterMove : MonoBehaviour
 	{
 		if (Vector3.Distance(transform.position, position) < 1f)
 			return;
+		
+		Debug.Log("gggb");
 
 		_targetPosition = position;
 		_isTarget = true;
@@ -54,11 +58,14 @@ public class CharacterMove : MonoBehaviour
 		if (!_haveToMove)
 			return;
 
+
 		Vector3 positionToGo = new Vector3(transform.position.x, _path.corners[_indexPath].y, transform.position.z);
+
 
 		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > 0.5f)
 		{
 			Vector3 dir = _path.corners[_indexPath] - transform.position;
+
 			directionToMove = new Vector3(dir.x, 0f, dir.z);
 			transform.Translate(directionToMove.normalized * Time.deltaTime * _speed);
 		}

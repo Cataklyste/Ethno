@@ -24,13 +24,12 @@ public class Spawner : MonoBehaviour {
 
     private void Spawn()
     {
-		for (int i = 0; i <= NombreIA; ++i)
+		for (int i = 0; i <= NombreIA - 1; ++i)
         {
             Vector3 newPos = Random.insideUnitCircle * SpawnRadius;
 			newPos.z = newPos.y;
-			Debug.Log("X = " + newPos.x + ", Y = " + newPos.y + ", Z = " + newPos.z);
 			GameObject tmp = GameObject.Instantiate(GO, this.transform.position + newPos, GO.transform.rotation) as GameObject;
-			tmp.transform.position = new Vector3(tmp.transform.position.x, 1, tmp.transform.position.z);
+			tmp.transform.position = new Vector3(tmp.transform.position.x, 0, tmp.transform.position.z);
         }
     }
 }
