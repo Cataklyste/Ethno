@@ -21,7 +21,9 @@ public class CharacterMove : MonoBehaviour
 	#endregion
 
 #region MonoBehaviours
-	void Start()
+
+
+	public virtual  void Start()
 	{
 		_path = new NavMeshPath();
 	}
@@ -38,6 +40,8 @@ public class CharacterMove : MonoBehaviour
 	{
 		if (Vector3.Distance(transform.position, position) < 1f)
 			return;
+		
+		Debug.Log("gggb");
 
 		_haveToMove = true;
 		UpdatePath(position);
@@ -50,12 +54,13 @@ public class CharacterMove : MonoBehaviour
 		if (!_haveToMove)
 			return;
 
-		transform.Translate(directionToMove.normalized*Time.deltaTime*_speed);
 
 		if (Vector3.Distance(transform.position, _path.corners[_indexPath]) > 0.5f)
 		{
 			Vector3 dir = _path.corners[_indexPath] - transform.position;
-			directionToMove = new Vector3(dir.x, transform.position.y, dir.z);
+			directionToMove = new Vector3(dir.x, 0, dir.z);
+			transform.Translate(directionToMove.normalized * Time.deltaTime * _speed);
+
 		}
 		else
 		{
@@ -73,6 +78,7 @@ public class CharacterMove : MonoBehaviour
 
 	void UpdatePath(Vector3 targetPosition)
 	{
+		Debug.Log(_path);
 		if (NavMesh.CalculatePath(transform.position, targetPosition, 1, _path))
 		{
 			_indexPath = 1;
