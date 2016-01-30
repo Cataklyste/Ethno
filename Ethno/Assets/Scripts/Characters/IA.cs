@@ -31,7 +31,7 @@ public class IA : CharacterMove
 
 		RealTimer = TimerMove;
 		StartPos = transform.position;
-        iaValue = language.salut;
+        //iaValue = language.salut;
 	}
 
 	public override void Update() 

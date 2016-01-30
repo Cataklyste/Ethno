@@ -22,6 +22,8 @@ public class Player : CharacterMove
 
 		base.Update();
 
+        Debug.Log(_AITarget);
+
 		if (_reatchTarget && _AITarget != null)
 		{
 			_circulareMenu.gameObject.SetActive(true);
@@ -46,9 +48,10 @@ public class Player : CharacterMove
 
 			if (Physics.Raycast(ray, out raycastHit))
 			{
+                Debug.Log(raycastHit.collider.gameObject.tag);
 				if (raycastHit.collider.tag == "MainAI")
 				{
-					_AITarget = raycastHit.collider.gameObject.GetComponentInParent<CharacterMove>();
+					_AITarget = raycastHit.collider.gameObject.transform.parent.GetComponentInParent<CharacterMove>();
                     _circulareMenu.ia = _AITarget as IA;
 				}
 				else
