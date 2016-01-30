@@ -42,6 +42,11 @@ public class CharacterMove : MonoBehaviour
 
 		UpdatePath(position);
 	}
+
+	public void StopMove()
+	{
+		_haveToMove = false;
+	}
 #endregion
 
 #region Public Methods
@@ -50,9 +55,7 @@ public class CharacterMove : MonoBehaviour
 		if (!_haveToMove)
 			return;
 
-
 		Vector3 positionToGo = new Vector3(transform.position.x, _path.corners[_indexPath].y, transform.position.z);
-
 
 		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > 0.5f)
 		{
@@ -65,7 +68,7 @@ public class CharacterMove : MonoBehaviour
 		{
 			if (_path.corners.Length - 1 <= _indexPath)
 			{
-				_haveToMove = false;
+				StopMove();
 			}
 			else
 			{
@@ -81,7 +84,7 @@ public class CharacterMove : MonoBehaviour
 		{
 			_indexPath = 1;
 			_haveToMove = true;
-
+			Debug.Log("sorugfsdijg");
 			for (int i = 0; i < _path.corners.Length - 1; ++i)
 				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);
 		}
