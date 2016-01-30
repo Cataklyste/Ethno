@@ -50,12 +50,13 @@ public class CharacterMove : MonoBehaviour
 		if (!_haveToMove)
 			return;
 
-		transform.Translate(directionToMove.normalized*Time.deltaTime*_speed);
+		Vector3 positionToGo = new Vector3(transform.position.x, _path.corners[_indexPath].y, transform.position.z);
 
-		if (Vector3.Distance(transform.position, _path.corners[_indexPath]) > 0.5f)
+		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > 0.5f)
 		{
 			Vector3 dir = _path.corners[_indexPath] - transform.position;
-			directionToMove = new Vector3(dir.x, transform.position.y, dir.z);
+			directionToMove = new Vector3(dir.x, 0f, dir.z);
+			transform.Translate(directionToMove.normalized * Time.deltaTime * _speed);
 		}
 		else
 		{
@@ -76,9 +77,14 @@ public class CharacterMove : MonoBehaviour
 		if (NavMesh.CalculatePath(transform.position, targetPosition, 1, _path))
 		{
 			_indexPath = 1;
+
+			for (int i = 0; i < _path.corners.Length - 1; ++i)
+				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);
 		}
 		else
+		{
 			_haveToMove = false;
+		}
 	}
 #endregion
 }
