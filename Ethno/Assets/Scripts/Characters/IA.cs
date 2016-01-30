@@ -9,7 +9,8 @@ public class IA : CharacterMove {
 	public float RadiusMove = 5.0f;
 	private Vector3 newPos;
 
-
+	[Range(0.0f, 100.0f)]
+	public float ChanceDeBouger;
 
 	public override void Start() 
 	{
@@ -22,8 +23,6 @@ public class IA : CharacterMove {
 		tmp.y = 0;
 		Vector3 michou = transform.position + tmp;
 
-		Debug.Log("pos = " + transform.position + ", michou = " + michou);
-
 		MovePosition(michou);
 	 }
 	
@@ -32,13 +31,17 @@ public class IA : CharacterMove {
 		Debug.Log(RealTimer);
 		if(RealTimer <= 0.0f)
 		{
-			Vector3 tmp = Random.insideUnitCircle * RadiusMove;
-			tmp.z = tmp.y;
-			tmp.y = 0;
-			Vector3 michou = transform.position + tmp;
-			MovePosition(michou);
+			float randTMP = Random.Range(0.0f, 100.0f);
+			if (randTMP <= ChanceDeBouger)
+			{
+				Vector3 tmp = Random.insideUnitCircle * RadiusMove;
+				tmp.z = tmp.y;
+				tmp.y = 0;
+				Vector3 michou = transform.position + tmp;
+				MovePosition(michou);
 
-			RealTimer = TimerMove;
+			}
+				RealTimer = TimerMove;
 		}
 		else
 		{
