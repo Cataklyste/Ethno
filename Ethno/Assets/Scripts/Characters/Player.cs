@@ -12,9 +12,6 @@ public class Player : CharacterMove
 
 	private Cue CueGrass, CueSnow, CueSand;
 
-	[SerializeField]
-	private CirculareMenu _circulareMenu;
-
 	public override void Start()
 	{
 		base.Start();
