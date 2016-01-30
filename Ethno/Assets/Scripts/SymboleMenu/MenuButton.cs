@@ -15,13 +15,22 @@ public class MenuButton : Button {
     private float speed;
 
     private int value;
+	private bool isStarted = false;
+
+
+	void OnEnable()
+	{
+		image = GetComponent<Image>();
+	}
 
 	void Start ()
     {
-        PlaceHolder = transform.GetChild(0) as RectTransform;
-        rectTransf = transform as RectTransform;
-        menu = rectTransf.parent.GetComponent<CirculareMenu>();
-	}
+		PlaceHolder = transform.GetChild(0) as RectTransform;
+		rectTransf = transform as RectTransform;
+		menu = rectTransf.parent.GetComponent<CirculareMenu>();
+
+		isStarted = true;
+    }
 
     public void SetImage(Sprite img)
     {
@@ -34,11 +43,12 @@ public class MenuButton : Button {
         this.value = value;
     }
 
+
     public override void OnPointerClick(UnityEngine.EventSystems.PointerEventData eventData)
     {
         base.OnPointerClick(eventData);
 
-        if (eventData.button != UnityEngine.EventSystems.PointerEventData.InputButton.Left)
+		if (eventData.button != UnityEngine.EventSystems.PointerEventData.InputButton.Left)
             return;
 
         translateToMiddle = !translateToMiddle;
@@ -55,23 +65,24 @@ public class MenuButton : Button {
             menu.RemoveValue(value);
             StartCoroutine(TranslateImageToButton());
         }
-
     }
 
     IEnumerator TranslateImageToMiddle()
     {
-        PlaceHolder.SetParent(rectTransf.parent);
+		PlaceHolder.SetParent(rectTransf.parent);
 
-        Vector2 direction = Vector2.zero - PlaceHolder.anchoredPosition;
+	    Vector2 positionTarget = -Vector2.up*50;
+
+		Vector2 direction = positionTarget - PlaceHolder.anchoredPosition;
         direction.Normalize();
 
         while (PlaceHolder.anchoredPosition != Vector2.zero && translateToMiddle)
         {
-            float distance = Vector2.Distance(PlaceHolder.anchoredPosition, Vector2.zero);
+            float distance = Vector2.Distance(PlaceHolder.anchoredPosition, positionTarget);
             if (distance > 1.0f)
                 PlaceHolder.Translate(direction * Time.deltaTime * distance * speed);
             else
-                PlaceHolder.anchoredPosition = Vector2.zero;
+                PlaceHolder.anchoredPosition = positionTarget;
 
             yield return new WaitForEndOfFrame();
         }
@@ -80,8 +91,6 @@ public class MenuButton : Button {
 
     IEnumerator TranslateImageToButton()
     {
-
-
         Vector2 centerPos = rectTransf.anchoredPosition;
 
         Vector2 direction = centerPos - PlaceHolder.anchoredPosition;
@@ -100,4 +109,15 @@ public class MenuButton : Button {
         PlaceHolder.SetParent(rectTransf);
     }
 
+	public void resetImagePos()
+	{
+		if (!isStarted) return;
+
+		if (PlaceHolder == null || rectTransf == null)
+			return;
+
+		translateToMiddle = false;
+		PlaceHolder.SetParent(rectTransf);
+		PlaceHolder.anchoredPosition = Vector2.zero;
+	}
 }
