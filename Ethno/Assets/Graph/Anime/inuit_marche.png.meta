@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 05d0c6e36b1c9f5409d737bc2fb0ce4a
+timeCreated: 1454165270
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: inuit_marche_0
+    21300002: inuit_marche_1
+    21300004: inuit_marche_2
+    21300006: inuit_marche_3
+    21300008: inuit_marche_4
+    21300010: inuit_marche_5
+    21300012: inuit_marche_6
+    21300014: inuit_marche_7
+    21300016: inuit_marche_8
+    21300018: inuit_marche_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: inuit_marche_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 3431
+        width: 482
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_1
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 3431
+        width: 482
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_2
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 3431
+        width: 482
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_3
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1435
+        width: 534
+        height: 1992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_4
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 2101
+        width: 534
+        height: 1326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_5
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 2101
+        width: 534
+        height: 1326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_6
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1435
+        width: 515
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_7
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1435
+        width: 515
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 771
+        width: 496
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_9
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 771
+        width: 499
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
