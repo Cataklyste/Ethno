@@ -54,7 +54,7 @@ public class CharacterMove : MonoBehaviour
 		_haveToMove = false;
 	}
 
-	protected virtual void DoAction()
+	protected virtual void DoAction(CharacterMove CM)
 	{
 	}
 #endregion
@@ -117,13 +117,16 @@ public class CharacterMove : MonoBehaviour
 		}
 	}
 
-	void OnTriggerEnter(Collider other)
+	protected virtual void OnTriggerEnter(Collider other)
 	{
+		Debug.Log("DEBUG 0");
 		CharacterMove character = other.gameObject.GetComponent<CharacterMove>();
-		
+
+		Debug.Log("DEBUG 0.5");
 		if (character != null && character != this)
 		{
-			DoAction();
+			Debug.Log("DEBUG 1");
+			DoAction(character);
 		}
 	}
 #endregion
