@@ -20,6 +20,8 @@ public class CirculareMenu : MonoBehaviour {
 
     public int playerValue { get; private set; }
 
+    public IA ia;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -107,7 +109,7 @@ public class CirculareMenu : MonoBehaviour {
         playerValue = playerValue | value;
 
         if (nbButtonPressed == 4)
-            Debug.Log("Call verify language");
+            ia.language.PlayerAnswerMatch(ia.iaValue, playerValue);
     }
 
     public void RemoveValue(int value)

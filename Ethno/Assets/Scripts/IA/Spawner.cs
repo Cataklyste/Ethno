@@ -30,6 +30,7 @@ public class Spawner : MonoBehaviour {
 			newPos.z = newPos.y;
 			GameObject tmp = GameObject.Instantiate(GO, this.transform.position + newPos, GO.transform.rotation) as GameObject;
 			tmp.transform.position = new Vector3(tmp.transform.position.x, 0, tmp.transform.position.z);
+            tmp.GetComponent<IA>().language = GetComponent<Language>();
         }
     }
 }

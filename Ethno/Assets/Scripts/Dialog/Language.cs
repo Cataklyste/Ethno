@@ -7,15 +7,15 @@ public class Language : MonoBehaviour
     
     public List<int> words;
 
-    private int salut;
-    private int insulte;
-    private int oui;
-    private int non;
+    public int salut;
+    public int insulte;
+    public int oui;
+    public int non;
 
-    private int answerSalut;
-    private int answerInsulte;
-    private int answerOui;
-    private int answerNon; 
+    public int answerSalut;
+    public int answerInsulte;
+    public int answerOui;
+    public int answerNon; 
 
 	void Start ()
     {
