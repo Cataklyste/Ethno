@@ -54,10 +54,7 @@ public class CharacterMove : MonoBehaviour
 		_haveToMove = false;
 	}
 
-	protected virtual void DoAction(CharacterMove CM)
-	{
-	}
-#endregion
+	#endregion
 
 #region Public Methods
 	void Move()
@@ -66,12 +63,10 @@ public class CharacterMove : MonoBehaviour
 			return;
 
 		Vector3 positionToGo = new Vector3(transform.position.x, _path.corners[_indexPath].y, transform.position.z);
-
-		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > 0.5f)
+		Vector3 dir = _path.corners[_indexPath] - transform.position;
+		directionToMove = new Vector3(dir.x, 0f, dir.z);
+		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > (directionToMove.normalized * Time.deltaTime * _speed).magnitude)
 		{
-			Vector3 dir = _path.corners[_indexPath] - transform.position;
-
-			directionToMove = new Vector3(dir.x, 0f, dir.z);
 			transform.Translate(directionToMove.normalized * Time.deltaTime * _speed);
 		}
 		else
@@ -83,7 +78,7 @@ public class CharacterMove : MonoBehaviour
 			}
 			else
 			{
-				transform.position = new Vector3(_path.corners[_indexPath].x, transform.position.y, _path.corners[_indexPath].z);
+				transform.Translate(_path.corners[_indexPath] - positionToGo);
 				++_indexPath;
 			}
 		}
@@ -110,25 +105,12 @@ public class CharacterMove : MonoBehaviour
 			_haveToMove = true;
 			_reatchTarget = false;
 
-			for (int i = 0; i < _path.corners.Length - 1; ++i)
-				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);
+			/*for (int i = 0; i < _path.corners.Length - 1; ++i)
+				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);*/
 		}
 		else
 		{
 			_haveToMove = false;
-		}
-	}
-
-	protected virtual void OnTriggerEnter(Collider other)
-	{
-		Debug.Log("DEBUG 0");
-		CharacterMove character = other.gameObject.GetComponent<CharacterMove>();
-
-		Debug.Log("DEBUG 0.5");
-		if (character != null && character != this)
-		{
-			Debug.Log("DEBUG 1");
-			DoAction(character);
 		}
 	}
 #endregion

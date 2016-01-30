@@ -43,7 +43,9 @@ public class CirculareMenu : MonoBehaviour {
 
     void OnEnable()
     {
-        if (buttons != null && buttons.Count > 3)
+		
+
+		if (buttons != null && buttons.Count > 3)
         {
             Vector2 orientation = Vector2.up * buttonDistance;
             float angle = 360.0f / buttons.Count;
@@ -76,7 +78,6 @@ public class CirculareMenu : MonoBehaviour {
 	{
 		for (int i = 0; i < buttons.Count; i++)
 			buttons[i].resetImagePos();
-
 	}
 
 	public Vector2 Rotate(Vector2 v, float degrees)
@@ -111,13 +112,10 @@ public class CirculareMenu : MonoBehaviour {
 
         if (nbButtonPressed == 4)
         {
-            if (ia.language.PlayerAnswerMatch(ia.iaValue, playerValue))
-            {
-                //call ai scenario method
-            }
-            else
-                Debug.Log("IA PAS CONTENTE");
-        }
+            ia.Answer(playerValue);
+			nbButtonPressed = 0;
+			playerValue = 0;
+		}
     }
 
     public void RemoveValue(int value)
