@@ -40,18 +40,23 @@ public class Player : CharacterMove
 			_circulareMenu.gameObject.SetActive(true);
 			_AITarget.QuestionPlayer(this);
 		}
+
 		if(_reatchTarget)
 		{
-			CueGrass.isMoving = false;
-			CueSnow.isMoving = false;
-			CueSand.isMoving = false;
+			EnableWalkSound(false);
 		}
 		else
 		{
-			CueGrass.isMoving = true;
-			CueSnow.isMoving = true;
-			CueSand.isMoving = true;
+			EnableWalkSound(false);
 		}
+	}
+
+	void EnableWalkSound(bool status)
+	{
+		if (CueGrass == null || CueSnow == null || CueSand == null) return;
+		CueGrass.isMoving = status;
+		CueSnow.isMoving = status;
+		CueSand.isMoving = status;
 	}
 
 	void GetMousePosition()
@@ -125,8 +130,6 @@ public class Player : CharacterMove
 	}
 	void OnTriggerExit(Collider other)
 	{
-		CueGrass.isActive = false;
-		CueSnow.isActive = false;
-		CueSand.isActive = false;
+		EnableWalkSound(false);
 	}
 }
