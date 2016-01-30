@@ -18,6 +18,8 @@ public class CharacterMove : MonoBehaviour
 	private NavMeshPath _path;
 	private int _indexPath = 1;
 
+	private Vector3 _targetPosition;
+	private bool _isTarget = false;
 	#endregion
 
 #region MonoBehaviours
@@ -31,6 +33,7 @@ public class CharacterMove : MonoBehaviour
 
 	public virtual void Update()
 	{
+		UpdatePath(_targetPosition);
 		Move();
 	}
 #endregion
@@ -43,8 +46,9 @@ public class CharacterMove : MonoBehaviour
 		
 		Debug.Log("gggb");
 
-		_haveToMove = true;
-		UpdatePath(position);
+		_targetPosition = position;
+		_isTarget = true;
+		//UpdatePath(position);
 	}
 #endregion
 
@@ -70,6 +74,7 @@ public class CharacterMove : MonoBehaviour
 			if (_path.corners.Length - 1 <= _indexPath)
 			{
 				_haveToMove = false;
+				_isTarget = false;
 			}
 			else
 			{
@@ -81,10 +86,13 @@ public class CharacterMove : MonoBehaviour
 
 	void UpdatePath(Vector3 targetPosition)
 	{
-		Debug.Log(_path);
+		if (!_isTarget)
+			return;
+
 		if (NavMesh.CalculatePath(transform.position, targetPosition, 1, _path))
 		{
 			_indexPath = 1;
+			_haveToMove = true;
 
 			for (int i = 0; i < _path.corners.Length - 1; ++i)
 				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);
