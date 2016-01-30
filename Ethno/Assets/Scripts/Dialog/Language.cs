@@ -55,6 +55,4 @@ public class Language : MonoBehaviour
 
         return false;
     }
-
-
 }
