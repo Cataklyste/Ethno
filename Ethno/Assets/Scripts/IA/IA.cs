@@ -3,7 +3,6 @@ using System.Collections;
 
 public class IA : MonoBehaviour {
 
-	public EEthni 
 
 	// Use this for initialization
 	void Start () {
