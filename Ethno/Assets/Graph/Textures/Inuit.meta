@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Ethno/Assets/Graph/Textures/Inuit.meta
 guid: d8af47e36f7db6b40bfdc335ef35d3bc
 folderAsset: yes
 timeCreated: 1454192108
+=======
+guid: 358adf7f6bf555d4eabe949040decf36
+folderAsset: yes
+timeCreated: 1454192563
+>>>>>>> 7b5b9181817cf70f0deb988f0993c87fe718be69:Ethno/Assets/Graph/Textures/Inuit.meta
 licenseType: Free
 DefaultImporter:
   userData: 
