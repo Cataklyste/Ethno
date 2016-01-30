@@ -18,15 +18,15 @@ public class MenuButton : Button {
 
 	void Start ()
     {
-        image = GetComponent<Image>();
         PlaceHolder = transform.GetChild(0) as RectTransform;
         rectTransf = transform as RectTransform;
         menu = rectTransf.parent.GetComponent<CirculareMenu>();
 	}
 
-    public void SetImage(Image img)
+    public void SetImage(Sprite img)
     {
-        image = img;
+        image = GetComponent<Image>();
+        image.sprite = img;
     }
 
     public void SetValue(int value)
