@@ -166,7 +166,6 @@ public class IA : CharacterMove
 		else if (_index == 3)
 			iaValue = language.non;
 
-		Debug.Log("QUESTION " + _index + ": " + iaValue + "reponse: " + language.getAnswer(iaValue));
 		_canAske = false;	
 	}
 
@@ -184,7 +183,6 @@ public class IA : CharacterMove
 
 		if (language.PlayerAnswerMatch(iaValue, reponse))
 		{
-			Debug.Log("ANSWER " + _index + ": ok " + reponse);
 
 			if (_isHumain)
 			{
@@ -197,7 +195,6 @@ public class IA : CharacterMove
 		}
 		else
 		{
-			Debug.Log("ANSWER " + _index + ": bad " + reponse + " ici "+  language.getAnswer(iaValue));
 			//TODO ANIMATION
 			EndTalk();
 		}
@@ -205,7 +202,6 @@ public class IA : CharacterMove
 
 	public void EndTalk()
 	{
-		Debug.Log("END");
 		_index = 0;
 		status = Status.NONE;
 
