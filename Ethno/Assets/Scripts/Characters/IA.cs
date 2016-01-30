@@ -13,17 +13,32 @@ public class IA : CharacterMove {
 	{
 		base.Start();
 
+		RealTimer = TimerMove;
+
 		Vector3 tmp = Random.insideUnitCircle * RadiusMove;
 		tmp.z = tmp.y;
 		tmp.y = 0;
-		Debug.Log("TMP = " + tmp);
 		Vector3 michou = transform.position + tmp;
 		MovePosition(michou);
 	}
 	
 	void Update () 
 	{
+		Debug.Log(RealTimer);
+		if(RealTimer <= 0.0f)
+		{
+			Vector3 tmp = Random.insideUnitCircle * RadiusMove;
+			tmp.z = tmp.y;
+			tmp.y = 0;
+			Vector3 michou = transform.position + tmp;
+			MovePosition(michou);
 
+			RealTimer = TimerMove;
+		}
+		else
+		{
+			RealTimer -= Time.deltaTime;
+		}
 
 		base.Update();
 	}
