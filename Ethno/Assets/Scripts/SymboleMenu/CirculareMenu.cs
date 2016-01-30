@@ -110,7 +110,14 @@ public class CirculareMenu : MonoBehaviour {
         playerValue = playerValue | value;
 
         if (nbButtonPressed == 4)
-            ia.language.PlayerAnswerMatch(ia.iaValue, playerValue);
+        {
+            if (ia.language.PlayerAnswerMatch(ia.iaValue, playerValue))
+            {
+                //call ai scenario method
+            }
+            else
+                Debug.Log("IA PAS CONTENTE");
+        }
     }
 
     public void RemoveValue(int value)
