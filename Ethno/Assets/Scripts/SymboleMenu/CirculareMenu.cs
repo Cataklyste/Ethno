@@ -26,7 +26,7 @@ public class CirculareMenu : MonoBehaviour {
 
         buttons = new List<MenuButton>();
 
-        for (int i = 0; i < 12; i++ )
+        for (int i = 0; i < 0; i++ )
         {
             GameObject go = GameObject.Instantiate(ButtonPrefab);
             go.transform.SetParent(rectTransf);
@@ -70,7 +70,7 @@ public class CirculareMenu : MonoBehaviour {
         return v;
     }
 
-    public void AddButton(Image img, int value)
+    public void AddButton(Sprite img, int value)
     {
         if (buttons == null)
             buttons = new List<MenuButton>();
