@@ -5,26 +5,23 @@ using UnityEngine.EventSystems;
 public class Player : CharacterMove
 {
 	private Vector3 _mousePosition;
-	private CharacterMove _AITarget;
+	//TODO list IA follow
+	private IA _AITarget = null;
+	private bool _active = false;
+	public CirculareMenu _circulareMenu;
 
-	[SerializeField]
-	private CirculareMenu _circulareMenu;
-
-	public override void Start()
-	{
-		base.Start();
-	}
 
 	public override void Update()
 	{
 		GetMousePosition();
 		
-
 		base.Update();
 
-		if (_reatchTarget && _AITarget != null)
+		if (_reatchTarget && _AITarget != null && !_active)
 		{
+			_active = true;
 			_circulareMenu.gameObject.SetActive(true);
+			_AITarget.QuestionPlayer(this);
 		}
 	}
 
@@ -46,23 +43,38 @@ public class Player : CharacterMove
 
 			if (Physics.Raycast(ray, out raycastHit))
 			{
-                Debug.Log(raycastHit.collider.gameObject.tag);
 				if (raycastHit.collider.tag == "MainAI")
 				{
-					_AITarget = raycastHit.collider.gameObject.transform.parent.GetComponentInParent<CharacterMove>();
-                    _circulareMenu.ia = _AITarget as IA;
+					IA tempAI = raycastHit.collider.gameObject.GetComponentInParent<IA>();
+
+					if (_AITarget == null ||(_AITarget != null && tempAI != _AITarget))
+					{
+						_AITarget = tempAI;
+
+						_circulareMenu.ia = _AITarget as IA;
+						Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
+
+						MovePosition(position);
+						//QuitConversation();
+					}
 				}
 				else
 				{
-					_circulareMenu.SUPER();
-					_circulareMenu.gameObject.SetActive(false);
-					_AITarget = null;
+					Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
+
+					MovePosition(position);
+					QuitConversation();
 				}
-
-				Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
-
-				MovePosition(position);
 			}
 		}
+	}
+
+	public void QuitConversation()
+	{
+		_circulareMenu.ia = null;
+		_circulareMenu.SUPER();
+		_circulareMenu.gameObject.SetActive(false);
+		_AITarget = null;
+		_active = false;
 	}
 }

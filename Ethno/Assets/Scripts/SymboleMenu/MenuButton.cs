@@ -62,7 +62,7 @@ public class MenuButton : Button {
         if (translateToMiddle)
         {
             image.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
-            menu.AddValue(value);
+            
             StartCoroutine(TranslateImageToMiddle());
 			PlayTangramSound();
         }
@@ -143,7 +143,7 @@ public class MenuButton : Button {
 		Vector2 direction = positionTarget - PlaceHolder.anchoredPosition;
         direction.Normalize();
 
-        while (PlaceHolder.anchoredPosition != Vector2.zero && translateToMiddle)
+        while (PlaceHolder.anchoredPosition != positionTarget && translateToMiddle)
         {
             float distance = Vector2.Distance(PlaceHolder.anchoredPosition, positionTarget);
             if (distance > 1.0f)
@@ -153,8 +153,9 @@ public class MenuButton : Button {
 
             yield return new WaitForEndOfFrame();
         }
-
-    }
+		Debug.Log("nice");
+		menu.AddValue(value);
+	}
 
     IEnumerator TranslateImageToButton()
     {

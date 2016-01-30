@@ -27,7 +27,10 @@ public class LanguageManager : MonoBehaviour {
         {
             string[] splitValues = words[i].Split(' ');
 
-            wordsValues.Add(1 << int.Parse(splitValues[0]) | 1 << int.Parse(splitValues[1]) | 1 << int.Parse(splitValues[2]) | 1 << int.Parse(splitValues[3]));
+            wordsValues.Add(1 << (int.Parse(splitValues[0]) - 1) |
+							1 << (int.Parse(splitValues[1]) - 1) | 
+							1 << (int.Parse(splitValues[2]) - 1) | 
+							1 << (int.Parse(splitValues[3]) - 1));
         }
 
         for (int i = 0; i < 16; i++)
