@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 52df8ad9cae99ce4f9798fbf065efb50
+guid: dce88d696e5d73a48b50bc6a23c6a32f
 timeCreated: 1454145381
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - ButtonPrefab: {fileID: 177658, guid: e4dca75607059d745ab97223b1269558, type: 2}
-  executionOrder: 200
+  defaultReferences: []
+  executionOrder: 100
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
