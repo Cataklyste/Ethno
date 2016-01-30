@@ -27,6 +27,7 @@ public class MenuButton : Button {
 	void Start ()
     {
 		PlaceHolder = transform.GetChild(0) as RectTransform;
+        PlaceHolder.GetComponent<Image>().sprite = image.sprite;
 		rectTransf = transform as RectTransform;
 		menu = rectTransf.parent.GetComponent<CirculareMenu>();
 

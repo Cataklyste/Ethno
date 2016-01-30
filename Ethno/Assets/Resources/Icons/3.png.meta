@@ -1,17 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 2a07141a81096d94aa67b89693a33e60
-timeCreated: 1454163076
-=======
-<<<<<<< HEAD
-guid: 88d14325eda63e54883b3efceefc8165
-timeCreated: 1454165412
-=======
-guid: 2cf5489c1f63ec247bd46373527a1d7b
-timeCreated: 1454161370
->>>>>>> 49606ad1d65b376d2e84d1b037fec3064e284721
->>>>>>> 9db14c261b1c94aa6c1834579d3ea76d4681c57e
-licenseType: Free
+guid: 41752662c5bc589459b623a225993a83
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -40,54 +28,23 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 9db14c261b1c94aa6c1834579d3ea76d4681c57e
-    aniso: -1
-    mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
-<<<<<<< HEAD
-=======
-=======
     aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
->>>>>>> 49606ad1d65b376d2e84d1b037fec3064e284721
->>>>>>> 9db14c261b1c94aa6c1834579d3ea76d4681c57e
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-<<<<<<< HEAD
-  spriteMode: 0
-=======
-<<<<<<< HEAD
-  spriteMode: 0
-=======
   spriteMode: 1
->>>>>>> 49606ad1d65b376d2e84d1b037fec3064e284721
->>>>>>> 9db14c261b1c94aa6c1834579d3ea76d4681c57e
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-<<<<<<< HEAD
-  alphaIsTransparency: 0
-  textureType: -1
-=======
-<<<<<<< HEAD
-  alphaIsTransparency: 0
-  textureType: -1
-=======
   alphaIsTransparency: 1
   textureType: 8
->>>>>>> 49606ad1d65b376d2e84d1b037fec3064e284721
->>>>>>> 9db14c261b1c94aa6c1834579d3ea76d4681c57e
   buildTargetSettings: []
   spriteSheet:
     sprites: []
