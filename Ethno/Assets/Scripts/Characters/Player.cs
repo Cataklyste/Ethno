@@ -49,7 +49,7 @@ public class Player : CharacterMove
 				if (raycastHit.collider.tag == "MainAI")
 				{
 					_AITarget = raycastHit.collider.gameObject.GetComponentInParent<CharacterMove>();
-					
+                    _circulareMenu.ia = _AITarget as IA;
 				}
 				else
 				{

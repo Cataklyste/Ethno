@@ -16,7 +16,11 @@ public class CirculareMenu : MonoBehaviour {
     [SerializeField]
     private int buttonDistance = 200;
 
+    private int nbButtonPressed = 0;
+
     public int playerValue { get; private set; }
+
+    public IA ia;
 
 	// Use this for initialization
 	void Start ()
@@ -101,11 +105,16 @@ public class CirculareMenu : MonoBehaviour {
 
     public void AddValue(int value)
     {
+        nbButtonPressed++;
         playerValue = playerValue | value;
+
+        if (nbButtonPressed == 4)
+            ia.language.PlayerAnswerMatch(ia.iaValue, playerValue);
     }
 
     public void RemoveValue(int value)
     {
+        nbButtonPressed--;
         playerValue = playerValue & (int.MaxValue ^ value);
     }
 }

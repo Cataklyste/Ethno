@@ -21,12 +21,17 @@ public class IA : CharacterMove
 
 	public float DistanceRetour = 1.0f;
 
+    public Language language;
+
+    public int iaValue;
+
 	public override void Start()
 	{
 		base.Start();
 
 		RealTimer = TimerMove;
 		StartPos = transform.position;
+        iaValue = language.salut;
 	}
 
 	public override void Update() 
