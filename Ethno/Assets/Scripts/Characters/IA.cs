@@ -16,6 +16,8 @@ public class IA : CharacterMove
 
 	[Range(0.0f, 100.0f)]
 	public float ChanceDeBouger;
+	[Range(0.0f, 100.0f)]
+	public float ChanceDeParler;
 
 	public float DistanceRetour = 1.0f;
 
@@ -29,7 +31,6 @@ public class IA : CharacterMove
 
 	public override void Update() 
 	{
-		Debug.Log(RealTimer);
 		if(RealTimer <= 0.0f)
 		{
 			float randTMP = Random.Range(0.0f, 100.0f);
@@ -58,7 +59,31 @@ public class IA : CharacterMove
 		base.Update();
 	}
 
-	public void OnTriggerEnter(Collider collid)
+	protected override void DoAction(CharacterMove Charac)
 	{
+		base.DoAction(Charac);
+
+		Debug.Log("JE COLLISIONE");
+
+		IA test = Charac as IA;
+
+		if (Charac != null)
+		{
+			float randParler = Random.Range(0.0f, 100.0f);
+			if (randParler <= ChanceDeParler)
+			{
+				Debug.Log("JE PARLE");
+				StopMove();
+			}
+		}
+
+
+	}
+
+	protected override void OnTriggerEnter(Collider other)
+	{
+		Debug.Log("totot");
+		base.OnTriggerEnter(other);
+
 	}
 }

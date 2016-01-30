@@ -18,11 +18,11 @@ public class CharacterMove : MonoBehaviour
 	private int layermask;
 
 	private Vector3 directionToMove;
-	private bool _haveToMove = false;
+	protected bool _haveToMove = false;
 	private NavMeshPath _path;
 	private int _indexPath = 1;
 
-
+	protected bool _reatchTarget = false;
 	#endregion
 
 #region MonoBehaviours
@@ -54,7 +54,7 @@ public class CharacterMove : MonoBehaviour
 		_haveToMove = false;
 	}
 
-	protected virtual void DoAction()
+	protected virtual void DoAction(CharacterMove CM)
 	{
 	}
 #endregion
@@ -79,6 +79,7 @@ public class CharacterMove : MonoBehaviour
 			if (_path.corners.Length - 1 <= _indexPath)
 			{
 				StopMove();
+				_reatchTarget = true;
 			}
 			else
 			{
@@ -107,7 +108,8 @@ public class CharacterMove : MonoBehaviour
 		{
 			_indexPath = 1;
 			_haveToMove = true;
-			
+			_reatchTarget = false;
+
 			for (int i = 0; i < _path.corners.Length - 1; ++i)
 				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);
 		}
@@ -117,13 +119,16 @@ public class CharacterMove : MonoBehaviour
 		}
 	}
 
-	void OnTriggerEnter(Collider other)
+	protected virtual void OnTriggerEnter(Collider other)
 	{
+		Debug.Log("DEBUG 0");
 		CharacterMove character = other.gameObject.GetComponent<CharacterMove>();
-		
+
+		Debug.Log("DEBUG 0.5");
 		if (character != null && character != this)
 		{
-			DoAction();
+			Debug.Log("DEBUG 1");
+			DoAction(character);
 		}
 	}
 #endregion
