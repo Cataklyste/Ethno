@@ -23,7 +23,7 @@ public class Player : CharacterMove
 
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit raycastHit;
-			
+
 			if (Physics.Raycast(ray, out raycastHit))
 			{
 				MovePosition(raycastHit.point);
