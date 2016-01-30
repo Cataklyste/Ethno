@@ -66,11 +66,18 @@ public class CirculareMenu : MonoBehaviour {
         for (int i = 0; i < buttons.Count; i++)
         {
             RectTransform rect = buttons[i].transform as RectTransform;
-            rect.gameObject.SetActive(false);
+			rect.gameObject.SetActive(false);
         }
     }
 
-    public Vector2 Rotate(this Vector2 v, float degrees)
+	public void SUPER()
+	{
+		for (int i = 0; i < buttons.Count; i++)
+			buttons[i].resetImagePos();
+
+	}
+
+	public Vector2 Rotate(Vector2 v, float degrees)
     {
         float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
         float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
