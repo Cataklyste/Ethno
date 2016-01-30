@@ -6,17 +6,23 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine.EventSystems;
 
+
 public class CharacterMove : MonoBehaviour
 {
 
 #region Fields
 
 	[SerializeField] private float _speed = 10f;
+	[SerializeField] private List<string> _areas;
+
+	private int layermask;
 
 	private Vector3 directionToMove;
 	private bool _haveToMove = false;
 	private NavMeshPath _path;
 	private int _indexPath = 1;
+
+
 	#endregion
 
 #region MonoBehaviours
@@ -82,7 +88,12 @@ public class CharacterMove : MonoBehaviour
 
 	void UpdatePath(Vector3 targetPosition)
 	{
-		if (NavMesh.CalculatePath(transform.position, targetPosition, 1, _path))
+		int layermask = 0;
+
+		foreach (string area in _areas)
+			layermask |= 1 << NavMesh.GetAreaFromName(area);
+
+		if (NavMesh.CalculatePath(transform.position, targetPosition, layermask, _path))
 		{
 			_indexPath = 1;
 			_haveToMove = true;
@@ -94,6 +105,17 @@ public class CharacterMove : MonoBehaviour
 		{
 			_haveToMove = false;
 		}
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+	/*	CharacterMove character = other.gameObject.GetComponent<CharacterMove>();
+		
+		if (character != null && character != this)
+		{
+				StopMove();
+				
+		}*/
 	}
 #endregion
 }

@@ -24,9 +24,7 @@ public class Player : CharacterMove
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit raycastHit;
 
-			int layerMask = 1 << LayerMask.NameToLayer("Ground");
-			
-			if (Physics.Raycast(ray, out raycastHit, layerMask))
+			if (Physics.Raycast(ray, out raycastHit))
 			{
 				MovePosition(raycastHit.point);
 			}
