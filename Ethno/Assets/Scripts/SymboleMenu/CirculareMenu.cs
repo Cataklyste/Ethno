@@ -26,7 +26,7 @@ public class CirculareMenu : MonoBehaviour {
 
         buttons = new List<MenuButton>();
 
-        for (int i = 0; i < 12; i++ )
+        for (int i = 0; i < 3; i++ )
         {
             GameObject go = GameObject.Instantiate(ButtonPrefab);
             go.transform.SetParent(rectTransf);
@@ -39,7 +39,7 @@ public class CirculareMenu : MonoBehaviour {
 
     void OnEnable()
     {
-        if (buttons != null && buttons.Count > 0)
+        if (buttons != null && buttons.Count > 3)
         {
             Vector2 orientation = Vector2.up * buttonDistance;
             float angle = 360.0f / buttons.Count;
@@ -50,11 +50,21 @@ public class CirculareMenu : MonoBehaviour {
             for (int i = 0; i < buttons.Count; i++)
             {
                 RectTransform rect = buttons[i].transform as RectTransform;
+                rect.gameObject.SetActive(true);
                 rect.offsetMax = Vector2.one * buttonSize;
                 rect.offsetMin = Vector2.zero;
                 rect.anchoredPosition = rectTransf.anchoredPosition + orientation;
                 orientation = Rotate(orientation, angle);
             }
+        }
+    }
+
+    void OnDisable()
+    {
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            RectTransform rect = buttons[i].transform as RectTransform;
+            rect.gameObject.SetActive(false);
         }
     }
 
@@ -70,7 +80,7 @@ public class CirculareMenu : MonoBehaviour {
         return v;
     }
 
-    public void AddButton(Image img, int value)
+    public void AddButton(Sprite img, int value)
     {
         if (buttons == null)
             buttons = new List<MenuButton>();

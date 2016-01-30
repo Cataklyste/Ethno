@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IA : MonoBehaviour {
-
+public class Rencontre : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
