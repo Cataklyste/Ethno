@@ -22,8 +22,6 @@ public class Player : CharacterMove
 
 		base.Update();
 
-        Debug.Log(_AITarget);
-
 		if (_reatchTarget && _AITarget != null)
 		{
 			_circulareMenu.gameObject.SetActive(true);
