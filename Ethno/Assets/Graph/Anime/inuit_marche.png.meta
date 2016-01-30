@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 05d0c6e36b1c9f5409d737bc2fb0ce4a
-timeCreated: 1454165270
+timeCreated: 1454166013
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,10 @@ TextureImporter:
     21300014: inuit_marche_7
     21300016: inuit_marche_8
     21300018: inuit_marche_9
+    21300020: inuit_marche_10
+    21300022: inuit_marche_11
+    21300024: inuit_marche_12
+    21300026: inuit_marche_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,30 +67,30 @@ TextureImporter:
     - name: inuit_marche_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 3431
-        width: 482
-        height: 652
+        x: 19
+        y: 3432
+        width: 534
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: inuit_marche_1
       rect:
         serializedVersion: 2
-        x: 581
-        y: 3431
-        width: 482
-        height: 652
+        x: 568
+        y: 3432
+        width: 534
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: inuit_marche_2
       rect:
         serializedVersion: 2
-        x: 1133
-        y: 3431
-        width: 482
-        height: 652
+        x: 1117
+        y: 3432
+        width: 534
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -94,69 +98,109 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 1435
+        y: 2767
         width: 534
-        height: 1992
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: inuit_marche_4
       rect:
         serializedVersion: 2
-        x: 571
-        y: 2101
+        x: 568
+        y: 2767
         width: 534
-        height: 1326
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: inuit_marche_5
       rect:
         serializedVersion: 2
-        x: 1123
-        y: 2101
+        x: 1117
+        y: 2767
         width: 534
-        height: 1326
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: inuit_marche_6
       rect:
         serializedVersion: 2
-        x: 565
-        y: 1435
-        width: 515
-        height: 638
+        x: 19
+        y: 2102
+        width: 534
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: inuit_marche_7
       rect:
         serializedVersion: 2
-        x: 1117
-        y: 1435
-        width: 515
-        height: 638
+        x: 568
+        y: 2102
+        width: 534
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: inuit_marche_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 771
-        width: 496
-        height: 604
+        x: 1117
+        y: 2102
+        width: 534
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: inuit_marche_9
       rect:
         serializedVersion: 2
-        x: 549
-        y: 771
-        width: 499
-        height: 604
+        x: 19
+        y: 1437
+        width: 534
+        height: 661
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_10
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 1437
+        width: 534
+        height: 661
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_11
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1437
+        width: 534
+        height: 661
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_12
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 772
+        width: 534
+        height: 661
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: inuit_marche_13
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 772
+        width: 534
+        height: 661
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

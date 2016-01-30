@@ -15,6 +15,7 @@ public class MenuButton : Button {
     private float speed;
 
     private int value;
+    private int tangramNumber;
 	private bool isStarted = false;
 
 
@@ -43,8 +44,13 @@ public class MenuButton : Button {
         this.value = value;
     }
 
+	public void SetTangramNumber(int tangramNumber)
+	{
+        this.tangramNumber = tangramNumber;
+	}
 
-    public override void OnPointerClick(UnityEngine.EventSystems.PointerEventData eventData)
+
+	public override void OnPointerClick(UnityEngine.EventSystems.PointerEventData eventData)
     {
         base.OnPointerClick(eventData);
 
@@ -58,14 +64,75 @@ public class MenuButton : Button {
             image.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
             menu.AddValue(value);
             StartCoroutine(TranslateImageToMiddle());
+			PlayTangramSound();
         }
         else
         {
             image.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             menu.RemoveValue(value);
             StartCoroutine(TranslateImageToButton());
-        }
+		}
     }
+
+	private void PlayTangramSound()
+	{
+		switch (tangramNumber)
+		{
+			case 1:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_01_C");
+				Debug.Log("C");
+				break;
+			case 2:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_02_C#");
+				Debug.Log("C#");
+				break;
+			case 3:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_03_D");
+				Debug.Log("D");
+				break;
+			case 4:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_04_D#");
+				Debug.Log("D#");
+				break;
+			case 5:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_05_E");
+				Debug.Log("E");
+				break;
+			case 6:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_06_F");
+				Debug.Log("F");
+				break;
+			case 7:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_07_F#");
+				Debug.Log("F#");
+				break;
+			case 8:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_08_G");
+				Debug.Log("G");
+				break;
+			case 9:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_09_G#");
+				Debug.Log("G#");
+				break;
+			case 10:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_10_A");
+				Debug.Log("A");
+				break;
+			case 11:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_11_A#");
+				Debug.Log("A#");
+				break;
+			case 12:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_12_B");
+				Debug.Log("B");
+				break;
+			default:
+				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_01_C");
+				Debug.Log("Default");
+				Debug.Log(tangramNumber);
+				break;
+		}
+	}
 
     IEnumerator TranslateImageToMiddle()
     {
@@ -119,5 +186,6 @@ public class MenuButton : Button {
 		translateToMiddle = false;
 		PlaceHolder.SetParent(rectTransf);
 		PlaceHolder.anchoredPosition = Vector2.zero;
+		SoundManager.Instance.StopSfx(gameObject);
 	}
 }
