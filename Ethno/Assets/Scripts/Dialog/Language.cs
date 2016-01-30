@@ -7,15 +7,15 @@ public class Language : MonoBehaviour
     
     public List<int> words;
 
-    private int salut;
-    private int insulte;
-    private int oui;
-    private int non;
+    public int salut;
+    public int insulte;
+    public int oui;
+    public int non;
 
-    private int answerSalut;
-    private int answerInsulte;
-    private int answerOui;
-    private int answerNon; 
+    public int answerSalut;
+    public int answerInsulte;
+    public int answerOui;
+    public int answerNon; 
 
 	void Start ()
     {
@@ -40,6 +40,20 @@ public class Language : MonoBehaviour
         tmp.Remove(answerOui);
         answerNon = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerNon);
+	}
+
+	public int getAnswer(int question)
+	{
+		if (question == salut)
+			return answerSalut;
+		else if (question == oui)
+			return answerOui;
+		else if (question == non)
+			return answerNon;
+		else if (question == insulte)
+			return answerInsulte;
+
+		return 0;
 	}
 
     public bool PlayerAnswerMatch(int question, int answer)

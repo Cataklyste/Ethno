@@ -3,8 +3,12 @@ using System.Collections;
 
 public class IA : CharacterMove
 {
-
-	public EEthni ethni;
+	public enum Status
+	{
+		NONE = 0,
+		TALK,
+		LISEN
+	}
 
 	private Vector3 StartPos;
 
@@ -21,6 +25,15 @@ public class IA : CharacterMove
 
 	public float DistanceRetour = 1.0f;
 
+    public Language language;
+
+    public int iaValue;
+
+	public Status status = Status.NONE;
+	private IA _targetTalke;
+	private int _index = 0;
+	private bool _canAske = true;
+
 	public override void Start()
 	{
 		base.Start();
@@ -31,12 +44,25 @@ public class IA : CharacterMove
 
 	public override void Update() 
 	{
-		if(RealTimer <= 0.0f)
+		if (status == Status.NONE)
+		{
+			RandomMove();
+			base.Update();
+		}
+		else if (status == Status.TALK)
+		{
+			askeQuestion();
+		}
+	}
+
+	void RandomMove()
+	{
+		if (RealTimer <= 0.0f)
 		{
 			float randTMP = Random.Range(0.0f, 100.0f);
 			if (randTMP <= ChanceDeBouger)
 			{
-				if(Vector3.Distance(transform.position, StartPos) <= DistanceRetour)
+				if (Vector3.Distance(transform.position, StartPos) <= DistanceRetour)
 				{
 					Vector3 tmp = Random.insideUnitCircle * RadiusMove;
 					tmp.z = tmp.y;
@@ -49,41 +75,94 @@ public class IA : CharacterMove
 					MovePosition(StartPos);
 				}
 			}
-				RealTimer = TimerMove;
+			RealTimer = TimerMove;
 		}
 		else
 		{
 			RealTimer -= Time.deltaTime;
 		}
-
-		base.Update();
 	}
+
+
 
 	protected override void DoAction(CharacterMove Charac)
 	{
-		base.DoAction(Charac);
+		IA targetIA = Charac as IA;
 
-		Debug.Log("JE COLLISIONE");
+		if (targetIA == null) return;
 
-		IA test = Charac as IA;
+		if (status != Status.NONE || targetIA.status != Status.NONE)
+			return;
 
-		if (Charac != null)
+		float randParler = Random.Range(0.0f, 100.0f);
+
+		if (randParler <= ChanceDeParler)
 		{
-			float randParler = Random.Range(0.0f, 100.0f);
-			if (randParler <= ChanceDeParler)
+			StopMove();
+			targetIA.StopMove();
+
+			if (gameObject.GetInstanceID() > targetIA.GetInstanceID())
 			{
-				Debug.Log("JE PARLE");
-				StopMove();
+				status = Status.TALK;
+				targetIA.status = Status.LISEN;
+				_targetTalke = targetIA;
+			}
+			else
+			{
+				status = Status.LISEN;
+				targetIA.status = Status.TALK;
+				targetIA._targetTalke = this;
 			}
 		}
-
-
 	}
 
-	protected override void OnTriggerEnter(Collider other)
-	{
-		Debug.Log("totot");
-		base.OnTriggerEnter(other);
+	
 
+	void askeQuestion()
+	{
+		//Debug.DrawRay(transform.position, Vector3.up, Color.red);
+		//Debug.DrawRay(_targetTalke.transform.position, Vector3.up, Color.red);
+
+		if (!_canAske) return;
+
+		if (_index == 0)
+			iaValue = language.salut;
+		else if (_index == 1)
+			iaValue = language.insulte;
+		else if (_index == 2)
+			iaValue = language.oui;
+		else if (_index == 3)
+			iaValue = language.non;
+		else
+		{
+			EndTalk();
+			return;
+		}
+
+		_canAske = false;
+		float randParler = Random.Range(1f, 3.0f);
+		StartCoroutine(WaitInteration(randParler));
+	}
+
+	public void  Answer(int question)
+	{
+		int answer = language.getAnswer(question);
+	}
+
+	public void EndTalk()
+	{
+		_index = 0;
+		status = Status.NONE;
+		_targetTalke.status = Status.NONE;
+		_targetTalke = null;
+	}
+
+	IEnumerator WaitInteration(float rand)
+	{
+		yield return new WaitForSeconds(rand);
+
+		_targetTalke.Answer(iaValue);
+		++_index;
+		_canAske = true;
 	}
 }

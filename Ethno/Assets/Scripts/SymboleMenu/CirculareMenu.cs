@@ -20,6 +20,8 @@ public class CirculareMenu : MonoBehaviour {
 
     public int playerValue { get; private set; }
 
+    public IA ia;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -28,13 +30,13 @@ public class CirculareMenu : MonoBehaviour {
 
         buttons = new List<MenuButton>();
 
-        for (int i = 0; i < 3; i++ )
-        {
-            GameObject go = GameObject.Instantiate(ButtonPrefab);
-            go.transform.SetParent(rectTransf);
-            go.GetComponent<MenuButton>().SetValue(1 << i);
-            buttons.Add(go.GetComponent<MenuButton>());
-        }
+        //for (int i = 0; i < 3; i++ )
+        //{
+        //    GameObject go = GameObject.Instantiate(ButtonPrefab);
+        //    go.transform.SetParent(rectTransf);
+        //    go.GetComponent<MenuButton>().SetValue(1 << i);
+        //    buttons.Add(go.GetComponent<MenuButton>());
+        //}
 
         gameObject.SetActive(false);
 	}
@@ -89,7 +91,7 @@ public class CirculareMenu : MonoBehaviour {
         return v;
     }
 
-    public void AddButton(Sprite img, int value)
+    public void AddButton(Sprite img, int value, int numberTangram)
     {
         if (buttons == null)
             buttons = new List<MenuButton>();
@@ -98,7 +100,8 @@ public class CirculareMenu : MonoBehaviour {
         go.transform.SetParent(rectTransf);
         go.GetComponent<MenuButton>().SetImage(img);
         go.GetComponent<MenuButton>().SetValue(value);
-        buttons.Add(go.GetComponent<MenuButton>());
+        go.GetComponent<MenuButton>().SetTangramNumber(numberTangram);
+		buttons.Add(go.GetComponent<MenuButton>());
     }
 
     public void AddValue(int value)
@@ -107,7 +110,14 @@ public class CirculareMenu : MonoBehaviour {
         playerValue = playerValue | value;
 
         if (nbButtonPressed == 4)
-            Debug.Log("Call verify language");
+        {
+            if (ia.language.PlayerAnswerMatch(ia.iaValue, playerValue))
+            {
+                //call ai scenario method
+            }
+            else
+                Debug.Log("IA PAS CONTENTE");
+        }
     }
 
     public void RemoveValue(int value)
