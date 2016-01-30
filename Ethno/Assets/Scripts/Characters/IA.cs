@@ -7,7 +7,8 @@ public class IA : CharacterMove
 	{
 		NONE = 0,
 		TALK,
-		LISEN
+		LISEN,
+		FOLLOW
 	}
 
 	private Vector3 StartPos;
@@ -33,6 +34,8 @@ public class IA : CharacterMove
 	private IA _targetTalke;
 	private int _index = 0;
 	private bool _canAske = true;
+	private bool _isHumain = false;
+	private Player _player = null;
 
 	public override void Start()
 	{
@@ -44,14 +47,23 @@ public class IA : CharacterMove
 
 	public override void Update() 
 	{
-		if (status == Status.NONE)
+		if (status == Status.NONE || status == Status.FOLLOW)
 		{
-			RandomMove();
+			if (status != Status.FOLLOW)
+			{
+				//RandomMove();
+			}
+			else
+				MovePosition(_player.transform.position);
+
 			base.Update();
 		}
 		else if (status == Status.TALK)
 		{
-			askeQuestion();
+			if (_canAske && !_isHumain)
+				QuestionIA();
+			else if (_canAske && _isHumain)
+				QuestionPlayer(_player);
 		}
 	}
 
@@ -83,14 +95,8 @@ public class IA : CharacterMove
 		}
 	}
 
-
-
-	protected override void DoAction(CharacterMove Charac)
+	void DoAction(IA targetIA)
 	{
-		IA targetIA = Charac as IA;
-
-		if (targetIA == null) return;
-
 		if (status != Status.NONE || targetIA.status != Status.NONE)
 			return;
 
@@ -101,30 +107,56 @@ public class IA : CharacterMove
 			StopMove();
 			targetIA.StopMove();
 
-			if (gameObject.GetInstanceID() > targetIA.GetInstanceID())
+			_targetTalke = targetIA;
+			targetIA._targetTalke = this;
+
+			int random = Random.Range(0, 1);
+
+			if (random == 0)
 			{
 				status = Status.TALK;
 				targetIA.status = Status.LISEN;
-				_targetTalke = targetIA;
 			}
 			else
 			{
 				status = Status.LISEN;
 				targetIA.status = Status.TALK;
-				targetIA._targetTalke = this;
 			}
 		}
 	}
 
-	
-
-	void askeQuestion()
+	void QuestionIA()
 	{
-		//Debug.DrawRay(transform.position, Vector3.up, Color.red);
-		//Debug.DrawRay(_targetTalke.transform.position, Vector3.up, Color.red);
+		Debug.DrawRay(transform.position, Vector3.up, Color.red);
+		Debug.DrawRay(_targetTalke.transform.position, Vector3.up, Color.red);
 
-		if (!_canAske) return;
+		_index = Random.Range(0, 3);
+		AskeQuestion(_index);
 
+		float randParler = Random.Range(1f, 3.0f);
+		StartCoroutine(AskingIn(randParler));
+	}
+
+	public void QuestionPlayer(Player player)
+	{
+		_player = player;
+		_isHumain = true;
+
+		if (_index <= 4)
+		{ 	
+			EndTalk();
+			_player = player;
+			status = Status.FOLLOW;
+			return;
+		}
+
+		status = Status.TALK;
+
+		AskeQuestion(_index);
+	}
+
+	void AskeQuestion(int index)
+	{
 		if (_index == 0)
 			iaValue = language.salut;
 		else if (_index == 1)
@@ -133,36 +165,88 @@ public class IA : CharacterMove
 			iaValue = language.oui;
 		else if (_index == 3)
 			iaValue = language.non;
-		else
-		{
-			EndTalk();
-			return;
-		}
 
-		_canAske = false;
-		float randParler = Random.Range(1f, 3.0f);
-		StartCoroutine(WaitInteration(randParler));
+		Debug.Log("QUESTION " + _index + ": " + iaValue + "reponse: " + language.getAnswer(iaValue));
+		_canAske = false;	
 	}
 
-	public void  Answer(int question)
+	public void Question(int questionValue)
 	{
-		int answer = language.getAnswer(question);
+		iaValue = language.getAnswer(questionValue); ;
+
+		float randParler = Random.Range(1f, 2.0f);
+		StartCoroutine(AnswerIn(randParler));
+	}
+
+	public void Answer(int reponse)
+	{
+		_canAske = true;	
+
+		if (language.PlayerAnswerMatch(iaValue, reponse))
+		{
+			Debug.Log("ANSWER " + _index + ": ok " + reponse);
+
+			if (_isHumain)
+			{
+				++_index;
+				_player._circulareMenu.SUPER();
+				return;
+			}
+
+			EndTalk();
+		}
+		else
+		{
+			Debug.Log("ANSWER " + _index + ": bad " + reponse + " ici "+  language.getAnswer(iaValue));
+			//TODO ANIMATION
+			EndTalk();
+		}
 	}
 
 	public void EndTalk()
 	{
+		Debug.Log("END");
 		_index = 0;
 		status = Status.NONE;
-		_targetTalke.status = Status.NONE;
-		_targetTalke = null;
+
+		if (!_isHumain)
+		{
+			_targetTalke.status = Status.NONE;
+			_targetTalke._targetTalke = null;
+			_targetTalke = null;
+		}
+		else
+			_player.QuitConversation();
+
+		_player = null;
+		_isHumain = false;
 	}
 
-	IEnumerator WaitInteration(float rand)
+	void OnTriggerEnter(Collider other)
+	{
+		IA character = other.gameObject.GetComponent<IA>();
+
+		if (character != null && character != this)
+		{
+			DoAction(character);
+		}
+	}
+
+	IEnumerator AskingIn(float rand)
+	{
+		yield return new WaitForSeconds(rand);
+	
+		//TODO show sinn
+
+		if (!_isHumain)
+			_targetTalke.Question(iaValue);
+		//else
+	}
+
+	IEnumerator AnswerIn(float rand)
 	{
 		yield return new WaitForSeconds(rand);
 
 		_targetTalke.Answer(iaValue);
-		++_index;
-		_canAske = true;
 	}
 }

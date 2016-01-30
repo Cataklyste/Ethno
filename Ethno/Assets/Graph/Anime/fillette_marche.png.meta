@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 1df23c88ada417048ba63075b168a400
+timeCreated: 1454179905
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fillette_marche_0
+    21300002: fillette_marche_1
+    21300004: fillette_marche_2
+    21300006: fillette_marche_3
+    21300008: fillette_marche_4
+    21300010: fillette_marche_5
+    21300012: fillette_marche_6
+    21300014: fillette_marche_7
+    21300016: fillette_marche_8
+    21300018: fillette_marche_9
+    21300020: fillette_marche_10
+    21300022: fillette_marche_11
+    21300024: fillette_marche_12
+    21300026: fillette_marche_13
+    21300028: fillette_marche_14
+    21300030: fillette_marche_15
+    21300032: fillette_marche_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 500
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: fillette_marche_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 3261
+        width: 372
+        height: 835
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_1
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 3261
+        width: 372
+        height: 835
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_2
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 3267
+        width: 369
+        height: 828
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_3
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 3270
+        width: 388
+        height: 826
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 2431
+        width: 387
+        height: 833
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_5
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2431
+        width: 387
+        height: 833
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_6
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 2431
+        width: 372
+        height: 833
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_7
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 2431
+        width: 372
+        height: 837
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_8
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1593
+        width: 370
+        height: 802
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_9
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1593
+        width: 370
+        height: 802
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_10
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 1592
+        width: 368
+        height: 811
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_11
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 1601
+        width: 412
+        height: 820
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 756
+        width: 409
+        height: 831
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_13
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 756
+        width: 412
+        height: 831
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_14
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 765
+        width: 406
+        height: 825
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_15
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 765
+        width: 406
+        height: 825
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_marche_16
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 2086
+        width: 27
+        height: 266
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
