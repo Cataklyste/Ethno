@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IA : CharacterMove {
+public class IA : CharacterMove
+{
+
+	public EEthni ethni;
+
+	private Vector3 StartPos;
 
 	public float TimerMove = 5.0f;
 	private float RealTimer;
@@ -12,20 +17,16 @@ public class IA : CharacterMove {
 	[Range(0.0f, 100.0f)]
 	public float ChanceDeBouger;
 
-	public override void Start() 
+	public float DistanceRetour = 1.0f;
+
+	public override void Start()
 	{
 		base.Start();
 
 		RealTimer = TimerMove;
+		StartPos = transform.position;
+	}
 
-		Vector3 tmp = Random.insideUnitCircle * RadiusMove;
-		tmp.z = tmp.y;
-		tmp.y = 0;
-		Vector3 michou = transform.position + tmp;
-
-		MovePosition(michou);
-	 }
-	
 	public override void Update() 
 	{
 		Debug.Log(RealTimer);
@@ -34,12 +35,18 @@ public class IA : CharacterMove {
 			float randTMP = Random.Range(0.0f, 100.0f);
 			if (randTMP <= ChanceDeBouger)
 			{
-				Vector3 tmp = Random.insideUnitCircle * RadiusMove;
-				tmp.z = tmp.y;
-				tmp.y = 0;
-				Vector3 michou = transform.position + tmp;
-				MovePosition(michou);
-
+				if(Vector3.Distance(transform.position, StartPos) <= DistanceRetour)
+				{
+					Vector3 tmp = Random.insideUnitCircle * RadiusMove;
+					tmp.z = tmp.y;
+					tmp.y = 0;
+					Vector3 michou = transform.position + tmp;
+					MovePosition(michou);
+				}
+				else
+				{
+					MovePosition(StartPos);
+				}
 			}
 				RealTimer = TimerMove;
 		}
@@ -49,5 +56,9 @@ public class IA : CharacterMove {
 		}
 
 		base.Update();
+	}
+
+	public void OnTriggerEnter(Collider collid)
+	{
 	}
 }
