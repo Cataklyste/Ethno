@@ -46,9 +46,10 @@ public class Player : CharacterMove
 
 			if (Physics.Raycast(ray, out raycastHit))
 			{
+                Debug.Log(raycastHit.collider.gameObject.tag);
 				if (raycastHit.collider.tag == "MainAI")
 				{
-					_AITarget = raycastHit.collider.gameObject.GetComponentInParent<CharacterMove>();
+					_AITarget = raycastHit.collider.gameObject.transform.parent.GetComponentInParent<CharacterMove>();
                     _circulareMenu.ia = _AITarget as IA;
 				}
 				else
@@ -57,7 +58,6 @@ public class Player : CharacterMove
 					_circulareMenu.gameObject.SetActive(false);
 					_AITarget = null;
 				}
-
 
 				Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
 
