@@ -99,21 +99,20 @@ public class IA : CharacterMove
 		if (randParler <= ChanceDeParler)
 		{
 			StopMove();
-			_targetTalke = targetIA;
+			targetIA.StopMove();
 
 			if (gameObject.GetInstanceID() > targetIA.GetInstanceID())
 			{
 				status = Status.TALK;
 				targetIA.status = Status.LISEN;
+				_targetTalke = targetIA;
 			}
 			else
 			{
 				status = Status.LISEN;
 				targetIA.status = Status.TALK;
+				targetIA._targetTalke = this;
 			}
-
-			Debug.Log(name + " " + status.ToString());
-			Debug.Log(targetIA.name + " " + targetIA.status.ToString());
 		}
 	}
 
@@ -121,6 +120,9 @@ public class IA : CharacterMove
 
 	void askeQuestion()
 	{
+		//Debug.DrawRay(transform.position, Vector3.up, Color.red);
+		//Debug.DrawRay(_targetTalke.transform.position, Vector3.up, Color.red);
+
 		if (!_canAske) return;
 
 		if (_index == 0)
@@ -137,8 +139,6 @@ public class IA : CharacterMove
 			return;
 		}
 
-		Debug.Log(iaValue);
-
 		_canAske = false;
 		float randParler = Random.Range(1f, 3.0f);
 		StartCoroutine(WaitInteration(randParler));
@@ -147,7 +147,6 @@ public class IA : CharacterMove
 	public void  Answer(int question)
 	{
 		int answer = language.getAnswer(question);
-		Debug.Log(answer);
 	}
 
 	public void EndTalk()

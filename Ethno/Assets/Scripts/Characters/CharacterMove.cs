@@ -110,8 +110,8 @@ public class CharacterMove : MonoBehaviour
 			_haveToMove = true;
 			_reatchTarget = false;
 
-			for (int i = 0; i < _path.corners.Length - 1; ++i)
-				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);
+			/*for (int i = 0; i < _path.corners.Length - 1; ++i)
+				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);*/
 		}
 		else
 		{

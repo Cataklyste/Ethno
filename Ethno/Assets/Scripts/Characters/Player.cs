@@ -58,7 +58,6 @@ public class Player : CharacterMove
 					_AITarget = null;
 				}
 
-
 				Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
 
 				MovePosition(position);
