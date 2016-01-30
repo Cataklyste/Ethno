@@ -26,7 +26,8 @@ public class Player : CharacterMove
 
 			if (Physics.Raycast(ray, out raycastHit))
 			{
-				MovePosition(raycastHit.point);
+				Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
+				MovePosition(position);
 			}
 		}
 	}

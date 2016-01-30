@@ -53,6 +53,10 @@ public class CharacterMove : MonoBehaviour
 	{
 		_haveToMove = false;
 	}
+
+	protected virtual void DoAction()
+	{
+	}
 #endregion
 
 #region Public Methods
@@ -91,11 +95,19 @@ public class CharacterMove : MonoBehaviour
 		foreach (string area in _areas)
 			layermask |= 1 << NavMesh.GetAreaFromName(area);
 
+	/*	NavMeshHit hit;
+		NavMesh.SamplePosition(targetPosition, out hit, 10, layermask);
+		{
+			
+			Debug.DrawRay(hit.position, Vector3.up, Color.red);
+		}*/
+
+
 		if (NavMesh.CalculatePath(transform.position, targetPosition, layermask, _path))
 		{
 			_indexPath = 1;
 			_haveToMove = true;
-			Debug.Log("sorugfsdijg");
+			
 			for (int i = 0; i < _path.corners.Length - 1; ++i)
 				Debug.DrawLine(_path.corners[i], _path.corners[i+1], Color.red);
 		}
@@ -107,13 +119,12 @@ public class CharacterMove : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-	/*	CharacterMove character = other.gameObject.GetComponent<CharacterMove>();
+		CharacterMove character = other.gameObject.GetComponent<CharacterMove>();
 		
 		if (character != null && character != this)
 		{
-				StopMove();
-				
-		}*/
+			DoAction();
+		}
 	}
 #endregion
 }
