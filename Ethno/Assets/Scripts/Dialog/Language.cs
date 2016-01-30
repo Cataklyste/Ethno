@@ -21,24 +21,24 @@ public class Language : MonoBehaviour
     {
         List<int> tmp = new List<int>(words);
 
-        salut = tmp[Random.Range(0, words.Count)];
+        salut = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(salut);
-        insulte = tmp[Random.Range(0, words.Count)];
+        insulte = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(insulte);
-        oui = tmp[Random.Range(0, words.Count)];
+        oui = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(oui);
-        non = tmp[Random.Range(0, words.Count)];
+        non = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(non);
 
         tmp = new List<int>(words);
 
-        answerSalut = tmp[Random.Range(0, words.Count)];
+        answerSalut = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerSalut);
-        answerInsulte = tmp[Random.Range(0, words.Count)];
+        answerInsulte = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerInsulte);
-        answerOui = tmp[Random.Range(0, words.Count)];
+        answerOui = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerOui);
-        answerNon = tmp[Random.Range(0, words.Count)];
+        answerNon = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerNon);
 	}
 
@@ -50,7 +50,7 @@ public class Language : MonoBehaviour
             return answerInsulte == answer;
         else if (question == oui)
             return answerOui == answer;
-        else if (question == salut)
+        else if (question == non)
             return answerNon == answer;
 
         return false;
