@@ -9,6 +9,8 @@ public class IA : CharacterMove {
 	public float RadiusMove = 5.0f;
 	private Vector3 newPos;
 
+
+
 	public override void Start() 
 	{
 		base.Start();
@@ -19,10 +21,13 @@ public class IA : CharacterMove {
 		tmp.z = tmp.y;
 		tmp.y = 0;
 		Vector3 michou = transform.position + tmp;
+
+		Debug.Log("pos = " + transform.position + ", michou = " + michou);
+
 		MovePosition(michou);
-	}
+	 }
 	
-	void Update () 
+	public override void Update() 
 	{
 		Debug.Log(RealTimer);
 		if(RealTimer <= 0.0f)
