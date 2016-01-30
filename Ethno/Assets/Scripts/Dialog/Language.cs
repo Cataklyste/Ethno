@@ -42,6 +42,20 @@ public class Language : MonoBehaviour
         tmp.Remove(answerNon);
 	}
 
+	public int getAnswer(int question)
+	{
+		if (question == salut)
+			return answerSalut;
+		else if (question == oui)
+			return answerOui;
+		else if (question == non)
+			return answerNon;
+		else if (question == insulte)
+			return answerInsulte;
+
+		return 0;
+	}
+
     public bool PlayerAnswerMatch(int question, int answer)
     {
         if (question == salut)

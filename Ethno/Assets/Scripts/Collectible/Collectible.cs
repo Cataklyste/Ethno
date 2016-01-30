@@ -41,7 +41,7 @@ public class Collectible : MonoBehaviour {
 
     void OnMouseDown()
     {
-        menu.AddButton(image, 1 << value);
+        menu.AddButton(image, 1 << (value - 1), value);
         Destroy(this.gameObject);
     }
 }
