@@ -121,13 +121,10 @@ public class CharacterMove : MonoBehaviour
 
 	protected virtual void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("DEBUG 0");
 		CharacterMove character = other.gameObject.GetComponent<CharacterMove>();
 
-		Debug.Log("DEBUG 0.5");
 		if (character != null && character != this)
 		{
-			Debug.Log("DEBUG 1");
 			DoAction(character);
 		}
 	}
