@@ -17,9 +17,6 @@ public class CharacterMove : MonoBehaviour
 	private bool _haveToMove = false;
 	private NavMeshPath _path;
 	private int _indexPath = 1;
-
-	private Vector3 _targetPosition;
-	private bool _isTarget = false;
 	#endregion
 
 #region MonoBehaviours
