@@ -107,8 +107,17 @@ public class Player : CharacterMove
 	}
 	void OnTriggerExit(Collider other)
 	{
-		CueGrass.isActive = false;
-		CueSnow.isActive = false;
-		CueSand.isActive = false;
+		if (other.tag == "TriggerGrass")
+		{
+			CueGrass.isActive = false;
+		}
+		else if (other.tag == "TriggerSnow")
+		{
+			CueSnow.isActive = false;
+		}
+		else if (other.tag == "TriggerSand")
+		{
+			CueSand.isActive = false;
+		}
 	}
 }
