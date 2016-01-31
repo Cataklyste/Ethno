@@ -112,6 +112,7 @@ public class CirculareMenu : MonoBehaviour {
 
         if (nbButtonPressed == 4)
         {
+            Debug.Log(ia);
             ia.Answer(playerValue);
 			nbButtonPressed = 0;
 			playerValue = 0;

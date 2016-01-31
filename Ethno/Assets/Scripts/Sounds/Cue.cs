@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public enum CueType { GRASS, SNOW, SAND }
+public enum CueType { GRASS, SNOW, SAND, DIRT }
 
 public class Cue : MonoBehaviour {
 
