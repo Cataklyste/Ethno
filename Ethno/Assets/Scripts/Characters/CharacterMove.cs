@@ -23,6 +23,11 @@ public class CharacterMove : MonoBehaviour
 	private int _indexPath = 1;
 
 	protected bool _reatchTarget = false;
+
+	[SerializeField]
+	private Animator anim;
+
+	private float someScale;
 	#endregion
 
 #region MonoBehaviours
@@ -31,12 +36,14 @@ public class CharacterMove : MonoBehaviour
 	public virtual  void Start()
 	{
 		_path = new NavMeshPath();
+		someScale = transform.localScale.x;
 	}
 
 
 	public virtual void Update()
 	{
 		Move();
+		SetAnimBool();
 	}
 #endregion
 
@@ -63,8 +70,13 @@ public class CharacterMove : MonoBehaviour
 			return;
 
 		Vector3 positionToGo = new Vector3(transform.position.x, _path.corners[_indexPath].y, transform.position.z);
+
 		Vector3 dir = _path.corners[_indexPath] - transform.position;
 		directionToMove = new Vector3(dir.x, 0f, dir.z);
+		if (directionToMove.x + transform.position.x <= transform.position.x)
+			transform.localScale = new Vector3(someScale, transform.localScale.y, transform.localScale.z);
+		else
+			transform.localScale = new Vector3(-someScale, transform.localScale.y, transform.localScale.z);
 		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > (directionToMove.normalized * Time.deltaTime * _speed).magnitude)
 		{
 			transform.Translate(directionToMove.normalized * Time.deltaTime * _speed);
@@ -81,6 +93,18 @@ public class CharacterMove : MonoBehaviour
 				transform.Translate(_path.corners[_indexPath] - positionToGo);
 				++_indexPath;
 			}
+		}
+	}
+
+	void SetAnimBool()
+	{
+		if(_reatchTarget)
+		{
+			anim.SetBool("isRunning", false);
+		}
+		else
+		{
+			anim.SetBool("isRunning", true);
 		}
 	}
 

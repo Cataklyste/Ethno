@@ -11,6 +11,8 @@ public class Player : CharacterMove
 
 	private Cue CueGrass, CueSnow, CueSand, CueDirt;
 
+	
+
 	public override void Start()
 	{
 		base.Start();
@@ -114,6 +116,8 @@ public class Player : CharacterMove
 		_circulareMenu.ia = null;
 		_circulareMenu.SUPER();
 		_circulareMenu.gameObject.SetActive(false);
+        /*if (_AITarget)
+            _AITarget.PlayerGoOut();*/
 		_AITarget = null;
 		_active = false;
 	}

@@ -56,6 +56,9 @@ public class IA : CharacterMove
 
 	private float td = 0;
 
+    public float offset;
+
+
 	public override void Start()
 	{
 		base.Start();
@@ -104,8 +107,10 @@ public class IA : CharacterMove
 		}
 		else if (status == Status.FOLLOW)
 		{
-			MovePosition(_player.transform.position);
-			base.Update();
+				Vector3 direction = _player.transform.position - transform.position;
+				direction.Normalize();
+				MovePosition(_player.transform.position - direction * offset);
+				base.Update();
 		}
 	}
 
@@ -334,6 +339,17 @@ public class IA : CharacterMove
 		_targetTalke = null;
 		haveIA = true;
 	}
+
+    public void PlayerGoOut()
+    {
+        _index = 0;
+        status = Status.NONE;
+
+        word.gameObject.SetActive(false);
+
+        _player = null;
+        _isHumain = false;
+    }
 
 	void OnTriggerEnter(Collider other)
 	{
