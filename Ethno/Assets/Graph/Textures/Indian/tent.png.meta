@@ -1,17 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 156ff23149811414e82c2fcfb20203ba
-timeCreated: 1454189853
-=======
-<<<<<<< HEAD
-guid: 965bd922cca45864b8b6cb0708fe083e
-timeCreated: 1454192119
-=======
-guid: 7125cd297a5652f49b36ea2c0e2dc004
-timeCreated: 1454192572
->>>>>>> 7b5b9181817cf70f0deb988f0993c87fe718be69
->>>>>>> 19025b75dd09fd486d42a8d4952d824163c92634
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -51,7 +39,7 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
+  alignment: 7
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100

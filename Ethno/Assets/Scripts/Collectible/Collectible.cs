@@ -39,10 +39,13 @@ public class Collectible : MonoBehaviour {
         highlighter.gameObject.SetActive(false);
     }
 
-    void OnMouseDown()
-    {
-        image = Resources.Load<Sprite>("Icons/"+value);
-        menu.AddButton(image, 1 << (value - 1), value);
-        Destroy(this.gameObject);
-    }
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Player")
+		{
+			image = Resources.Load<Sprite>("Icons/" + value);
+			menu.AddButton(image, 1 << (value - 1), value);
+			Destroy(this.gameObject);
+		}
+	}
 }
