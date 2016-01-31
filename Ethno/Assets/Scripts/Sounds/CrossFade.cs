@@ -9,6 +9,8 @@ public class CrossFade : MonoBehaviour {
     public float timeCrossFade;
     public float fadeInBaseVolume;
     public float fadeOutBaseVolume;
+
+    public float volumeMax= 0.5f;
 	// Use this for initialization
 	void Start () {
         
@@ -29,7 +31,7 @@ public class CrossFade : MonoBehaviour {
         fadeIn.GetComponent<AudioSource>().volume = 0.0f;
         while (time < timeCrossFade)
         {
-            multiplier = 1.0f / timeCrossFade;
+            multiplier = volumeMax / timeCrossFade;
             fadeIn.GetComponent<AudioSource>().volume = multiplier * time;
 
             time += Time.deltaTime;
@@ -48,8 +50,8 @@ public class CrossFade : MonoBehaviour {
 
         while (time < timeCrossFade)
         {
-            multiplier = 1.0f / timeCrossFade;
-            fadeOut.GetComponent<AudioSource>().volume = 1 - multiplier * time;
+            multiplier = volumeMax / timeCrossFade;
+            fadeOut.GetComponent<AudioSource>().volume = volumeMax - multiplier * time;
 
             time += Time.deltaTime;
 

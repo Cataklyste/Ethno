@@ -19,8 +19,6 @@ public class Player : CharacterMove
 	{
 		base.Start();
 
-		_reatchTarget = true;
-
 		Cue[] tmp = GetComponents<Cue>();
 		for(int i = 0; i < tmp.Length; ++i)
 		{
@@ -80,7 +78,7 @@ public class Player : CharacterMove
 
 	void GetMousePosition()
 	{
-		if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
 		{
 			if (EventSystem.current.IsPointerOverGameObject())
 				return;
@@ -88,8 +86,9 @@ public class Player : CharacterMove
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit raycastHit;
 
+            int layermask = 1 << LayerMask.NameToLayer("Ground");
 
-			if (Physics.Raycast(ray, out raycastHit))
+            if (Physics.Raycast(ray, out raycastHit, 600f, layermask))
 			{
 				if (raycastHit.collider.tag == "MainAI")
 				{
