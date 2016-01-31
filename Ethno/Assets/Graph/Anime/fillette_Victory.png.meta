@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: b8c549ba33b3810478552689a065814e
+timeCreated: 1454221186
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fillette_Victory_0
+    21300002: fillette_Victory_1
+    21300004: fillette_Victory_2
+    21300006: fillette_Victory_3
+    21300008: fillette_Victory_4
+    21300010: fillette_Victory_5
+    21300012: fillette_Victory_6
+    21300014: fillette_Victory_7
+    21300016: fillette_Victory_8
+    21300018: fillette_Victory_9
+    21300020: fillette_Victory_10
+    21300022: fillette_Victory_11
+    21300024: fillette_Victory_12
+    21300026: fillette_Victory_13
+    21300028: fillette_Victory_14
+    21300030: fillette_Victory_15
+    21300032: fillette_Victory_16
+    21300034: fillette_Victory_17
+    21300036: fillette_Victory_18
+    21300038: fillette_Victory_19
+    21300040: fillette_Victory_20
+    21300042: fillette_Victory_21
+    21300044: fillette_Victory_22
+    21300046: fillette_Victory_23
+    21300048: fillette_Victory_24
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 500
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: fillette_Victory_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_1
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_2
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_3
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_4
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_5
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_6
+      rect:
+        serializedVersion: 2
+        x: 2724
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_7
+      rect:
+        serializedVersion: 2
+        x: 3178
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_8
+      rect:
+        serializedVersion: 2
+        x: 3632
+        y: 3246
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_10
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_11
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_12
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_13
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_14
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_15
+      rect:
+        serializedVersion: 2
+        x: 2724
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_16
+      rect:
+        serializedVersion: 2
+        x: 3178
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_17
+      rect:
+        serializedVersion: 2
+        x: 3632
+        y: 2396
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1546
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_19
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1546
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_20
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 1546
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_21
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 1546
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_22
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 1546
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_23
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 1546
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Victory_24
+      rect:
+        serializedVersion: 2
+        x: 2724
+        y: 1546
+        width: 450
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
