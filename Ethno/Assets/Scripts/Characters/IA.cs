@@ -137,7 +137,8 @@ public class IA : CharacterMove
 		Debug.DrawRay(transform.position, Vector3.up, Color.red);
 		Debug.DrawRay(_targetTalke.transform.position, Vector3.up, Color.red);
 
-		_index = Random.Range(0, 3);
+		_index = Random.Range(0, 4);
+		Debug.Log(_index);
 		AskeQuestion(_index);
 
 		float randParler = Random.Range(1f, 3.0f);
