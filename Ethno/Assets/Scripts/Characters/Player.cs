@@ -83,6 +83,7 @@ public class Player : CharacterMove
 
 					if (_AITarget == null ||(_AITarget != null && tempAI != _AITarget))
 					{
+                        Debug.Log("coucou");
 						_AITarget = tempAI;
 
 						_circulareMenu.ia = _AITarget as IA;
