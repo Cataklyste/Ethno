@@ -211,7 +211,14 @@ public class IA : CharacterMove
 	public void QuestionPlayer(Player player)
 	{
 		if (_player == null && status != Status.NONE)
+		{
+			//Debug.Log(_targetTalke._targetTalke.status);
 			EndTalk();
+			/*Debug.Log(_targetTalke);
+			Debug.Log(_targetTalke._targetTalke);
+			Debug.Log(_targetTalke._targetTalke.status);*/
+
+		}
 
 		_player = player;
 		Fear = false;
