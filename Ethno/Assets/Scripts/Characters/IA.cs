@@ -37,12 +37,17 @@ public class IA : CharacterMove
 	private bool _isHumain = false;
 	private Player _player = null;
 
+    private SpriteRenderer word;
+
 	public override void Start()
 	{
 		base.Start();
 
 		RealTimer = TimerMove;
 		StartPos = transform.position;
+
+        word = transform.FindChild("GameObject/Word").gameObject.GetComponent<SpriteRenderer>();
+        word.gameObject.SetActive(false);
 	}
 
 	public override void Update() 
@@ -142,7 +147,7 @@ public class IA : CharacterMove
 		_player = player;
 		_isHumain = true;
 
-		if (_index <= 4)
+		if (_index >= 4)
 		{ 	
 			EndTalk();
 			_player = player;
@@ -153,6 +158,7 @@ public class IA : CharacterMove
 		status = Status.TALK;
 
 		AskeQuestion(_index);
+        StartCoroutine(AskingIn(0.0f));
 	}
 
 	void AskeQuestion(int index)
@@ -166,7 +172,6 @@ public class IA : CharacterMove
 		else if (_index == 3)
 			iaValue = language.non;
 
-		Debug.Log("QUESTION " + _index + ": " + iaValue + "reponse: " + language.getAnswer(iaValue));
 		_canAske = false;	
 	}
 
@@ -180,11 +185,11 @@ public class IA : CharacterMove
 
 	public void Answer(int reponse)
 	{
-		_canAske = true;	
+		_canAske = true;
+        word.gameObject.SetActive(false);
 
 		if (language.PlayerAnswerMatch(iaValue, reponse))
 		{
-			Debug.Log("ANSWER " + _index + ": ok " + reponse);
 
 			if (_isHumain)
 			{
@@ -197,7 +202,6 @@ public class IA : CharacterMove
 		}
 		else
 		{
-			Debug.Log("ANSWER " + _index + ": bad " + reponse + " ici "+  language.getAnswer(iaValue));
 			//TODO ANIMATION
 			EndTalk();
 		}
@@ -205,7 +209,6 @@ public class IA : CharacterMove
 
 	public void EndTalk()
 	{
-		Debug.Log("END");
 		_index = 0;
 		status = Status.NONE;
 
@@ -235,12 +238,13 @@ public class IA : CharacterMove
 	IEnumerator AskingIn(float rand)
 	{
 		yield return new WaitForSeconds(rand);
-	
-		//TODO show sinn
+
+
+        word.gameObject.SetActive(true);
+        word.sprite = Resources.Load<Sprite>("Icons/Words/" + iaValue);
 
 		if (!_isHumain)
 			_targetTalke.Question(iaValue);
-		//else
 	}
 
 	IEnumerator AnswerIn(float rand)
@@ -248,5 +252,5 @@ public class IA : CharacterMove
 		yield return new WaitForSeconds(rand);
 
 		_targetTalke.Answer(iaValue);
-	}
+    }
 }
