@@ -6,7 +6,7 @@ public class MusicLoop : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		SoundManager.Instance.PlaySfx(gameObject, "M_V1_Start");
+		SoundManager.Instance.PlaySfx(gameObject, "M_V2_Start");
 	}
 	
 	// Update is called once per frame
@@ -14,7 +14,7 @@ public class MusicLoop : MonoBehaviour {
 	{
 		if (SoundManager.Instance.CanIPlaySound(gameObject))
 		{
-			SoundManager.Instance.PlaySfx(gameObject, "M_V1_Loop", 1.0f, false, 500.0f, true);
+			SoundManager.Instance.PlaySfx(gameObject, "M_V2_Loop", 1.0f, false, 500.0f, true);
 		}
 	}
 }

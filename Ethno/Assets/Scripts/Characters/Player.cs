@@ -4,13 +4,12 @@ using UnityEngine.EventSystems;
 
 public class Player : CharacterMove
 {
-	private Vector3 _mousePosition;
 	//TODO list IA follow
 	private IA _AITarget = null;
 	private bool _active = false;
 	public CirculareMenu _circulareMenu;
 
-	private Cue CueGrass, CueSnow, CueSand;
+	private Cue CueGrass, CueSnow, CueSand, CueDirt;
 
 	public override void Start()
 	{
@@ -25,6 +24,8 @@ public class Player : CharacterMove
 				CueSnow = tmp[i];
 			else if (tmp[i].Type == CueType.SAND)
 				CueSand = tmp[i];
+			else if (tmp[i].Type == CueType.DIRT)
+				CueDirt = tmp[i];
 		}
 	}
 
@@ -47,16 +48,17 @@ public class Player : CharacterMove
 		}
 		else
 		{
-			EnableWalkSound(false);
+			EnableWalkSound(true);
 		}
 	}
 
 	void EnableWalkSound(bool status)
 	{
-		if (CueGrass == null || CueSnow == null || CueSand == null) return;
+		if (CueGrass == null || CueSnow == null || CueSand == null || CueDirt == null) return;
 		CueGrass.isMoving = status;
 		CueSnow.isMoving = status;
 		CueSand.isMoving = status;
+		CueDirt.isMoving = status;
 	}
 
 	void GetMousePosition()
@@ -65,11 +67,6 @@ public class Player : CharacterMove
 		{
 			if (EventSystem.current.IsPointerOverGameObject())
 				return;
-
-			if (_mousePosition == Input.mousePosition)
-				return;
-
-			_mousePosition = Input.mousePosition;
 
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit raycastHit;
@@ -128,9 +125,28 @@ public class Player : CharacterMove
 		{
 			CueSand.isActive = true;
 		}
+		else if (other.tag == "TriggerDirt")
+		{
+			CueDirt.isActive = true;
+		}
 	}
 	void OnTriggerExit(Collider other)
 	{
-		EnableWalkSound(false);
+		if (other.tag == "TriggerGrass")
+		{
+			CueGrass.isActive = false;
+		}
+		else if (other.tag == "TriggerSnow")
+		{
+			CueSnow.isActive = false;
+		}
+		else if (other.tag == "TriggerSand")
+		{
+			CueSand.isActive = false;
+		}
+		else if (other.tag == "TriggerDirt")
+		{
+			CueDirt.isActive = false;
+		}
 	}
 }
