@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 
 public class IA : CharacterMove
 {
@@ -37,11 +38,26 @@ public class IA : CharacterMove
 	private bool _isHumain = false;
 	private Player _player = null;
 
-    private SpriteRenderer word;
+	private bool questionPosser = false;
+	private float _deltaQuestion = 0f;
+	private float _deltaAnswer = 0f;
+
+	private bool _GetQuestion = false;
+
+	private SpriteRenderer word;
 
 	public float DistanceSound = 5f;
 
+	public float TimeQuestion = 2f;
+	public float TimeAnswern = 2f;
+
+	private bool Fear = false;
+	private bool haveIA = false;
+
+	private float td = 0;
+
     public float offset;
+
 
 	public override void Start()
 	{
@@ -54,21 +70,14 @@ public class IA : CharacterMove
         word.gameObject.SetActive(false);
 	}
 
-	public override void Update() 
+	public override void Update()
 	{
-		if (status == Status.NONE || status == Status.FOLLOW)
-		{
-            if (status != Status.FOLLOW)
-            {
-                RandomMove();
-            }
-            else
-            {
-                Vector3 direction = _player.transform.position - transform.position;
-                direction.Normalize();
-                MovePosition(_player.transform.position - direction * offset);
-            }
+		if (Fear) return;
 
+		if (status == Status.NONE)
+		{
+			RandomMove();
+				
 			base.Update();
 		}
 		else if (status == Status.TALK)
@@ -77,7 +86,45 @@ public class IA : CharacterMove
 				QuestionIA();
 			else if (_canAske && _isHumain)
 				QuestionPlayer(_player);
+
+			if (!questionPosser)
+				AskingQuestion();
+
+			if (!_isHumain)
+			{
+				td += Time.deltaTime;
+				if (td >= TimeAnswern + TimeQuestion)
+				{
+					status = Status.NONE;
+					td = 0f;
+				}
+			}
 		}
+		else if (status == Status.LISEN)
+		{
+			if (_GetQuestion)
+				ListenQuestion();
+		}
+		else if (status == Status.FOLLOW)
+		{
+				Vector3 direction = _player.transform.position - transform.position;
+				direction.Normalize();
+				MovePosition(_player.transform.position - direction * offset);
+				base.Update();
+		}
+	}
+
+	public void YouAreMind()
+	{
+		Fear = true;
+		EndTalk();
+		StopMove();
+	}
+
+	public void RealiseYOU()
+	{
+		Fear = false;
+		EndTalk();
 	}
 
 	void RandomMove()
@@ -135,24 +182,44 @@ public class IA : CharacterMove
 				status = Status.LISEN;
 				targetIA.status = Status.TALK;
 			}
+			haveIA = true;
 		}
 	}
 
 	void QuestionIA()
 	{
-		Debug.DrawRay(transform.position, Vector3.up, Color.red);
-		Debug.DrawRay(_targetTalke.transform.position, Vector3.up, Color.red);
-
 		_index = Random.Range(0, 4);
-		AskeQuestion(_index);
 
-		float randParler = Random.Range(1f, 3.0f);
-		StartCoroutine(AskingIn(randParler));
+		AskeQuestion(_index);
+	}
+
+	void AskingQuestion()
+	{
+		_deltaQuestion += Time.deltaTime;
+
+		if (_deltaQuestion >= TimeQuestion)
+		{
+			questionPosser = true;
+			_targetTalke.Question(iaValue);
+			word.gameObject.SetActive(false);
+		}
+	}
+
+	void ListenQuestion()
+	{
+		_deltaAnswer += Time.deltaTime;
+
+		if (_deltaAnswer >= TimeAnswern)
+		{
+			_targetTalke.Answer(iaValue);
+			word.gameObject.SetActive(false);
+		}
 	}
 
 	public void QuestionPlayer(Player player)
 	{
 		_player = player;
+		Fear = false;
 		_isHumain = true;
 
 		if (_index >= 4)
@@ -164,9 +231,9 @@ public class IA : CharacterMove
 		}
 
 		status = Status.TALK;
-
+		
 		AskeQuestion(_index);
-        StartCoroutine(AskingIn(0.0f));
+		questionPosser = true;
 	}
 
 	void AskeQuestion(int index)
@@ -180,28 +247,51 @@ public class IA : CharacterMove
 		else if (_index == 3)
 			iaValue = language.non;
 
-		_canAske = false;	
+		word.sprite = Resources.Load<Sprite>("Icons/Words/" + iaValue);
+		word.gameObject.SetActive(true);
+
+		_canAske = false;
+
+		if (_index == 0)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Hello", 1f, true, DistanceSound, false);
+		else if (_index == 1)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Injure", 1f, true, DistanceSound, false);
+		else if (_index == 2)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Yes", 1f, true, DistanceSound, false);
+		else if (_index == 3)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_No", 1f, true, DistanceSound, false);
 	}
 
 	public void Question(int questionValue)
 	{
-		iaValue = language.getAnswer(questionValue); ;
+		iaValue = language.getAnswer(questionValue);
 
-		float randParler = Random.Range(1f, 2.0f);
-		StartCoroutine(AnswerIn(randParler));
+		_GetQuestion = true;
+
+		word.gameObject.SetActive(true);
+		word.sprite = Resources.Load<Sprite>("Icons/Words/" + iaValue);
+
+		int tmp = language.getIndexAnswer(iaValue);
+
+		if (tmp == 0)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Hello", 1f, true, DistanceSound, false);
+		else if (tmp == 1)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Injure", 1f, true, DistanceSound, false);
+		else if (tmp == 2)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Yes", 1f, true, DistanceSound, false);
+		else if (tmp == 3)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_No", 1f, true, DistanceSound, false);
+
 	}
 
 	public void Answer(int reponse)
 	{
 		_canAske = true;
-        word.gameObject.SetActive(false);
 
 		if (language.PlayerAnswerMatch(iaValue, reponse))
 		{
-
 			if (_isHumain)
 			{
-				word.gameObject.SetActive(false);
 				++_index;
 				_player._circulareMenu.SUPER();
 				return;
@@ -218,23 +308,36 @@ public class IA : CharacterMove
 
 	public void EndTalk()
 	{
-		_index = 0;
-		status = Status.NONE;
+		ResetIA();
+
+		if (_isHumain && _player != null)
+		{
+			_player.QuitConversation();
+			_player = null;
+		}
+
+		_isHumain = false;
+
+	}
+
+	public void ResetIA()
+	{	
+		if (haveIA)
+		{
+			haveIA = false;
+			if (_targetTalke)
+			_targetTalke.ResetIA();
+		}
 
 		word.gameObject.SetActive(false);
-
-		if (!_isHumain)
-		{
-			_targetTalke.word.gameObject.SetActive(false);
-			_targetTalke.status = Status.NONE;
-			_targetTalke._targetTalke = null;
-			_targetTalke = null;
-		}
-		else
-			_player.QuitConversation();
-
-		_player = null;
-		_isHumain = false;
+		_index = 0;
+		status = Status.NONE;
+		questionPosser = false;
+		_deltaQuestion = 0f;
+		_deltaAnswer = 0f;
+		_GetQuestion = false;
+		_targetTalke = null;
+		haveIA = true;
 	}
 
     public void PlayerGoOut()
@@ -257,47 +360,4 @@ public class IA : CharacterMove
 			DoAction(character);
 		}
 	}
-
-	IEnumerator AskingIn(float rand)
-	{
-		yield return new WaitForSeconds(rand);
-
-        word.gameObject.SetActive(true);
-        word.sprite = Resources.Load<Sprite>("Icons/Words/" + iaValue);
-
-		if (_index == 0)
-			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Hello", 1f, true, DistanceSound, false);
-		else if (_index == 1)
-			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Injure", 1f, true, DistanceSound, false);
-		else if (_index == 2)
-			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Yes", 1f, true, DistanceSound, false);
-		else if (_index == 3)
-			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_No", 1f, true, DistanceSound, false);
-
-		if (!_isHumain)
-			_targetTalke.Question(iaValue);
-	}
-
-	IEnumerator AnswerIn(float rand)
-	{
-		yield return new WaitForSeconds(rand);
-
-		word.gameObject.SetActive(true);
-		word.sprite = Resources.Load<Sprite>("Icons/Words/" + iaValue);
-
-		int tmp = language.getIndexAnswer(iaValue);
-
-		if (tmp == 0)
-			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Hello", 1f, true, DistanceSound, false);
-		else if (tmp == 1)
-			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Injure", 1f, true, DistanceSound, false);
-		else if (tmp == 2)
-			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Yes", 1f, true, DistanceSound, false);
-		else if (tmp == 3)
-			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_No", 1f, true, DistanceSound, false);
-
-		yield return new WaitForSeconds(rand);
-
-		_targetTalke.Answer(iaValue);
-    }
 }

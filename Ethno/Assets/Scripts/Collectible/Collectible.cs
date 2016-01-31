@@ -4,8 +4,6 @@ using System.Collections;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Collectible : MonoBehaviour {
 
-    Highlighter highlighter;
-
     [SerializeField]
     private int value;
     [SerializeField]
@@ -19,8 +17,6 @@ public class Collectible : MonoBehaviour {
 
         GameObject go = GameObject.FindGameObjectWithTag("CircularMenu");
         menu = go.GetComponent<CirculareMenu>();
-        highlighter = GetComponentInChildren<Highlighter>();
-        highlighter.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -29,22 +25,14 @@ public class Collectible : MonoBehaviour {
 	
 	}
 
-    void OnMouseEnter()
-    {
-        highlighter.gameObject.SetActive(true);
-    }
-
-    void OnMouseExit()
-    {
-        highlighter.gameObject.SetActive(false);
-    }
-
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player")
 		{
 			image = Resources.Load<Sprite>("Icons/" + value);
 			menu.AddButton(image, 1 << (value - 1), value);
+            other.transform.FindChild("GameObject/UnlockedIcon").GetComponent<SpriteRenderer>().sprite = image;
+            other.transform.FindChild("GameObject/UnlockedIcon").GetComponent<SignPreview>().ResetTimer();
 			Destroy(this.gameObject);
 		}
 	}
