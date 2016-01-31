@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: 895bcf092e2d5cd49b2a680d79798b44
-timeCreated: 1454224094
+guid: ff7663edc7a57b44aba1e0e17ba6fa0b
+timeCreated: 1454226167
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Waterfall_Spritesheet_0
-    21300002: Waterfall_Spritesheet_1
-    21300004: Waterfall_Spritesheet_2
-    21300006: Waterfall_Spritesheet_3
-    21300008: Waterfall_Spritesheet_4
+    21300000: remous_sprites_0
+    21300002: remous_sprites_1
+    21300004: remous_sprites_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,7 +53,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Waterfall_Spritesheet_0
+    - name: remous_sprites_0
       rect:
         serializedVersion: 2
         x: 0
@@ -65,7 +63,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Waterfall_Spritesheet_1
+    - name: remous_sprites_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -75,30 +73,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Waterfall_Spritesheet_2
+    - name: remous_sprites_2
       rect:
         serializedVersion: 2
         x: 2048
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Waterfall_Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Waterfall_Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 4096
         y: 0
         width: 1024
         height: 1024
