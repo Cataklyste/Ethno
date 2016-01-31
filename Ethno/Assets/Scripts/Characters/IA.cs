@@ -292,6 +292,9 @@ public class IA : CharacterMove
 		{
 			if (_isHumain)
 			{
+                
+                SoundManager.Instance.PlaySfx(GameObject.Find("ChordObject"), "Chord_" + iaValue);
+
 				++_index;
 				_player._circulareMenu.SUPER();
 				return;
