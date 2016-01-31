@@ -8,6 +8,8 @@ public class Cue : MonoBehaviour {
 
 	public GameObject kamikaze;
 
+	public float volume = 1f;
+
 	public float TimerInstantiate = 0.3f;
 	private float _realTimer;
 
@@ -42,7 +44,7 @@ public class Cue : MonoBehaviour {
 			if (_realTimer <= 0.0f)
 			{
 				GameObject tmp = Instantiate(kamikaze) as GameObject;
-				SoundManager.Instance.PlaySfx(tmp, listCopy[0]);
+				SoundManager.Instance.PlaySfx(tmp, listCopy[0], volume);
 				listCopy.Remove(listCopy[0]);
 				_realTimer = TimerInstantiate;
 			}

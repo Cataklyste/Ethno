@@ -39,6 +39,8 @@ public class IA : CharacterMove
 
     private SpriteRenderer word;
 
+	public float DistanceSound = 5f;
+
 	public override void Start()
 	{
 		base.Start();
@@ -56,7 +58,7 @@ public class IA : CharacterMove
 		{
 			if (status != Status.FOLLOW)
 			{
-				//RandomMove();
+				RandomMove();
 			}
 			else
 				MovePosition(_player.transform.position);
@@ -193,6 +195,7 @@ public class IA : CharacterMove
 
 			if (_isHumain)
 			{
+				word.gameObject.SetActive(false);
 				++_index;
 				_player._circulareMenu.SUPER();
 				return;
@@ -212,8 +215,11 @@ public class IA : CharacterMove
 		_index = 0;
 		status = Status.NONE;
 
+		word.gameObject.SetActive(false);
+
 		if (!_isHumain)
 		{
+			_targetTalke.word.gameObject.SetActive(false);
 			_targetTalke.status = Status.NONE;
 			_targetTalke._targetTalke = null;
 			_targetTalke = null;
@@ -239,9 +245,17 @@ public class IA : CharacterMove
 	{
 		yield return new WaitForSeconds(rand);
 
-
         word.gameObject.SetActive(true);
         word.sprite = Resources.Load<Sprite>("Icons/Words/" + iaValue);
+
+		if (_index == 0)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Hello", 1f, true, DistanceSound, false);
+		else if (_index == 1)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Injure", 1f, true, DistanceSound, false);
+		else if (_index == 2)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Yes", 1f, true, DistanceSound, false);
+		else if (_index == 3)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_No", 1f, true, DistanceSound, false);
 
 		if (!_isHumain)
 			_targetTalke.Question(iaValue);
@@ -249,6 +263,22 @@ public class IA : CharacterMove
 
 	IEnumerator AnswerIn(float rand)
 	{
+		yield return new WaitForSeconds(rand);
+
+		word.gameObject.SetActive(true);
+		word.sprite = Resources.Load<Sprite>("Icons/Words/" + iaValue);
+
+		int tmp = language.getIndexAnswer(iaValue);
+
+		if (tmp == 0)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Hello", 1f, true, DistanceSound, false);
+		else if (tmp == 1)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Injure", 1f, true, DistanceSound, false);
+		else if (tmp == 2)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_Yes", 1f, true, DistanceSound, false);
+		else if (tmp == 3)
+			SoundManager.Instance.PlaySfx(gameObject, "Sfx_Sign_No", 1f, true, DistanceSound, false);
+
 		yield return new WaitForSeconds(rand);
 
 		_targetTalke.Answer(iaValue);

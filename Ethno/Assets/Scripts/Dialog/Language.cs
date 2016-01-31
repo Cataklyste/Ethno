@@ -42,6 +42,19 @@ public class Language : MonoBehaviour
         tmp.Remove(answerNon);
 	}
 
+	public int getIndexAnswer(int index)
+	{
+		if(index == salut)
+			return 0;
+		else if (index == insulte)
+			return 1;
+		else if (index == oui)
+			return 2;
+		else if (index == non)
+			return 3;
+		return 0;
+	}
+
 	public int getAnswer(int question)
 	{
 		if (question == salut)
