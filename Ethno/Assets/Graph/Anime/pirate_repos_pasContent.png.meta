@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 9bf32f77e6ba41f408cd987db0590e13
+timeCreated: 1454234439
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pirate_repos_pasContent_0
+    21300002: pirate_repos_pasContent_1
+    21300004: pirate_repos_pasContent_2
+    21300006: pirate_repos_pasContent_3
+    21300008: pirate_repos_pasContent_4
+    21300010: pirate_repos_pasContent_5
+    21300012: pirate_repos_pasContent_6
+    21300014: pirate_repos_pasContent_7
+    21300016: pirate_repos_pasContent_8
+    21300018: pirate_repos_pasContent_9
+    21300020: pirate_repos_pasContent_10
+    21300022: pirate_repos_pasContent_11
+    21300024: pirate_repos_pasContent_12
+    21300026: pirate_repos_pasContent_13
+    21300028: pirate_repos_pasContent_14
+    21300030: pirate_repos_pasContent_15
+    21300032: pirate_repos_pasContent_16
+    21300034: pirate_repos_pasContent_17
+    21300036: pirate_repos_pasContent_18
+    21300038: pirate_repos_pasContent_19
+    21300040: pirate_repos_pasContent_20
+    21300042: pirate_repos_pasContent_21
+    21300044: pirate_repos_pasContent_22
+    21300046: pirate_repos_pasContent_23
+    21300048: pirate_repos_pasContent_24
+    21300050: pirate_repos_pasContent_25
+    21300052: pirate_repos_pasContent_26
+    21300054: pirate_repos_pasContent_27
+    21300056: pirate_repos_pasContent_28
+    21300058: pirate_repos_pasContent_29
+    21300060: pirate_repos_pasContent_30
+    21300062: pirate_repos_pasContent_31
+    21300064: pirate_repos_pasContent_32
+    21300066: pirate_repos_pasContent_33
+    21300068: pirate_repos_pasContent_34
+    21300070: pirate_repos_pasContent_35
+    21300072: pirate_repos_pasContent_36
+    21300074: pirate_repos_pasContent_37
+    21300076: pirate_repos_pasContent_38
+    21300078: pirate_repos_pasContent_39
+    21300080: pirate_repos_pasContent_40
+    21300082: pirate_repos_pasContent_41
+    21300084: pirate_repos_pasContent_42
+    21300086: pirate_repos_pasContent_43
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: pirate_repos_pasContent_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_1
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_2
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_3
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_4
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_5
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_6
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_7
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_8
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 3428
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_10
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_11
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_12
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_13
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_14
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_15
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_16
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_17
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 2760
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_19
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_20
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_21
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_22
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_23
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_24
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_25
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_26
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 2092
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_28
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_29
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_30
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_31
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_32
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_33
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_34
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_35
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 1424
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 756
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_37
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 756
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_38
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 756
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_39
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 756
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_40
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 756
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_41
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 756
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_42
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 756
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_repos_pasContent_43
+      rect:
+        serializedVersion: 2
+        x: 2891
+        y: 756
+        width: 413
+        height: 668
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
