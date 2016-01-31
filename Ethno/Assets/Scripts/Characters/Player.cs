@@ -11,6 +11,8 @@ public class Player : CharacterMove
 
 	private Cue CueGrass, CueSnow, CueSand, CueDirt;
 
+	
+
 	public override void Start()
 	{
 		base.Start();

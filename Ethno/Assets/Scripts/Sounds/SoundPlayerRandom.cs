@@ -39,6 +39,7 @@ public class SoundPlayerRandom : MonoBehaviour {
 						listCopy.Remove(listCopy[0]);
 					}
 				}
+				_realTimer = TimerInstantiate;
 			}
 			else
 			{
