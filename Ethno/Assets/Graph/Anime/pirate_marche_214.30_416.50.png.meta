@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: 0b9be174e52b13245a08b7d715c45fc3
+timeCreated: 1454200156
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pirate_marche_214.30_416.50_0
+    21300002: pirate_marche_214.30_416.50_1
+    21300004: pirate_marche_214.30_416.50_2
+    21300006: pirate_marche_214.30_416.50_3
+    21300008: pirate_marche_214.30_416.50_4
+    21300010: pirate_marche_214.30_416.50_5
+    21300012: pirate_marche_214.30_416.50_6
+    21300014: pirate_marche_214.30_416.50_7
+    21300016: pirate_marche_214.30_416.50_8
+    21300018: pirate_marche_214.30_416.50_9
+    21300020: pirate_marche_214.30_416.50_10
+    21300022: pirate_marche_214.30_416.50_11
+    21300024: pirate_marche_214.30_416.50_12
+    21300026: pirate_marche_214.30_416.50_13
+    21300028: pirate_marche_214.30_416.50_14
+    21300030: pirate_marche_214.30_416.50_15
+    21300032: pirate_marche_214.30_416.50_16
+    21300034: pirate_marche_214.30_416.50_17
+    21300036: pirate_marche_214.30_416.50_18
+    21300038: pirate_marche_214.30_416.50_19
+    21300040: pirate_marche_214.30_416.50_20
+    21300042: pirate_marche_214.30_416.50_21
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: pirate_marche_214.30_416.50_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3426
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_1
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 3426
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_2
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 3426
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_3
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 3426
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_4
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 3426
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2753
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_6
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 2753
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_7
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 2753
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_8
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 2753
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_9
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 2753
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2080
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_11
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 2080
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_12
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 2080
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_13
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 2080
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_14
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 2080
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1407
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_16
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1407
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_17
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 1407
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_18
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1407
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_19
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1407
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 734
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pirate_marche_214.30_416.50_21
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 734
+        width: 360
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
