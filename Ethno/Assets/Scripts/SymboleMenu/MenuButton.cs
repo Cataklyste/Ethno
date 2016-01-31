@@ -5,7 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(Image))]
 public class MenuButton : Button {
 
-    private Image image;
+    private Image imageButteon;
     private RectTransform rectTransf;
 
     private RectTransform PlaceHolder;
@@ -19,15 +19,15 @@ public class MenuButton : Button {
 	private bool isStarted = false;
 
 
-	void OnEnable()
+	protected override void OnEnable()
 	{
-		image = GetComponent<Image>();
+		imageButteon = GetComponent<Image>();
 	}
 
-	void Start ()
+	protected override void Start ()
     {
 		PlaceHolder = transform.GetChild(0) as RectTransform;
-        PlaceHolder.GetComponent<Image>().sprite = image.sprite;
+        PlaceHolder.GetComponent<Image>().sprite = imageButteon.sprite;
 		rectTransf = transform as RectTransform;
 		menu = rectTransf.parent.GetComponent<CirculareMenu>();
 
@@ -36,8 +36,8 @@ public class MenuButton : Button {
 
     public void SetImage(Sprite img)
     {
-        image = GetComponent<Image>();
-        image.sprite = img;
+        imageButteon = GetComponent<Image>();
+        imageButteon.sprite = img;
     }
 
     public void SetValue(int value)
@@ -62,14 +62,14 @@ public class MenuButton : Button {
 
         if (translateToMiddle)
         {
-            image.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+            imageButteon.color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
             
             StartCoroutine(TranslateImageToMiddle());
 			PlayTangramSound();
         }
         else
         {
-            image.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            imageButteon.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             menu.RemoveValue(value);
             StartCoroutine(TranslateImageToButton());
 		}
@@ -81,56 +81,42 @@ public class MenuButton : Button {
 		{
 			case 1:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_01_C");
-				Debug.Log("C");
 				break;
 			case 2:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_02_C#");
-				Debug.Log("C#");
 				break;
 			case 3:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_03_D");
-				Debug.Log("D");
 				break;
 			case 4:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_04_D#");
-				Debug.Log("D#");
 				break;
 			case 5:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_05_E");
-				Debug.Log("E");
 				break;
 			case 6:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_06_F");
-				Debug.Log("F");
 				break;
 			case 7:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_07_F#");
-				Debug.Log("F#");
 				break;
 			case 8:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_08_G");
-				Debug.Log("G");
 				break;
 			case 9:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_09_G#");
-				Debug.Log("G#");
 				break;
 			case 10:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_10_A");
-				Debug.Log("A");
 				break;
 			case 11:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_11_A#");
-				Debug.Log("A#");
 				break;
 			case 12:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_12_B");
-				Debug.Log("B");
 				break;
 			default:
 				SoundManager.Instance.PlaySfx(gameObject, "Sfx_Tangram_01_C");
-				Debug.Log("Default");
-				Debug.Log(tangramNumber);
 				break;
 		}
 	}
@@ -154,7 +140,6 @@ public class MenuButton : Button {
 
             yield return new WaitForEndOfFrame();
         }
-		Debug.Log("nice");
 		menu.AddValue(value);
 	}
 
