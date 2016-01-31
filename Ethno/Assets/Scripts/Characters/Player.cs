@@ -19,6 +19,11 @@ public class Player : CharacterMove
 	{
 		base.Start();
 
+<<<<<<< HEAD
+=======
+		_reatchTarget = true;
+
+>>>>>>> a387b39b0ae8239cc88a76a9cfddbf23a8570a50
 		Cue[] tmp = GetComponents<Cue>();
 		for(int i = 0; i < tmp.Length; ++i)
 		{
@@ -47,7 +52,7 @@ public class Player : CharacterMove
 	public override void Update()
 	{
 		GetMousePosition();
-		
+
 		base.Update();
 
 		if (_reatchTarget && _AITarget != null && !_active)
@@ -57,10 +62,14 @@ public class Player : CharacterMove
 			_AITarget.QuestionPlayer(this);
 		}
 
-		if(_reatchTarget)
+		if (_reatchTarget)
+		{
 			EnableWalkSound(false);
+		}
 		else
+		{
 			EnableWalkSound(true);
+		}
 	}
 
 	void EnableWalkSound(bool status)

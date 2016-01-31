@@ -118,6 +118,8 @@ public class SoundManager : SingletonScript<SoundManager>
         {
             yield return null;
         }
+		if (audioSource.clip == null)
+			yield return null;
 
         yield return new WaitForSeconds(audioSource.clip.length);
 
