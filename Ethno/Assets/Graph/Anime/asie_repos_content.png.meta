@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: bd8eb843c3f9f614990dd78b309217d9
+timeCreated: 1454232765
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: asie_repos_content_0
+    21300002: asie_repos_content_1
+    21300004: asie_repos_content_2
+    21300006: asie_repos_content_3
+    21300008: asie_repos_content_4
+    21300010: asie_repos_content_5
+    21300012: asie_repos_content_6
+    21300014: asie_repos_content_7
+    21300016: asie_repos_content_8
+    21300018: asie_repos_content_9
+    21300020: asie_repos_content_10
+    21300022: asie_repos_content_11
+    21300024: asie_repos_content_12
+    21300026: asie_repos_content_13
+    21300028: asie_repos_content_14
+    21300030: asie_repos_content_15
+    21300032: asie_repos_content_16
+    21300034: asie_repos_content_17
+    21300036: asie_repos_content_18
+    21300038: asie_repos_content_19
+    21300040: asie_repos_content_20
+    21300042: asie_repos_content_21
+    21300044: asie_repos_content_22
+    21300046: asie_repos_content_23
+    21300048: asie_repos_content_24
+    21300050: asie_repos_content_25
+    21300052: asie_repos_content_26
+    21300054: asie_repos_content_27
+    21300056: asie_repos_content_28
+    21300058: asie_repos_content_29
+    21300060: asie_repos_content_30
+    21300062: asie_repos_content_31
+    21300064: asie_repos_content_32
+    21300066: asie_repos_content_33
+    21300068: asie_repos_content_34
+    21300070: asie_repos_content_35
+    21300072: asie_repos_content_36
+    21300074: asie_repos_content_37
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: asie_repos_content_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_1
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_2
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_3
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_4
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_5
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_6
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_7
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_8
+      rect:
+        serializedVersion: 2
+        x: 2776
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_9
+      rect:
+        serializedVersion: 2
+        x: 3123
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_10
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 3404
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_12
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_13
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_14
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_15
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_16
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_17
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_18
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_19
+      rect:
+        serializedVersion: 2
+        x: 2776
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_20
+      rect:
+        serializedVersion: 2
+        x: 3123
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_21
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 2712
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2020
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_23
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 2020
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_24
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 2020
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_25
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 2020
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_repos_content_26
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 2020
+        width: 347
+        height: 692
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
