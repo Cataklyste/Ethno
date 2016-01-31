@@ -9,6 +9,9 @@ public class SoundPlayerRandom : MonoBehaviour {
 
 	private List<string> listCopy;
 
+	public float TimerInstantiate = 0.3f;
+	private float _realTimer;
+
 	[Range(0.0f, 100.0f)]
 	public float ChanceDeJouer;
 
@@ -25,14 +28,21 @@ public class SoundPlayerRandom : MonoBehaviour {
 		}
 		else
 		{
-			float randTMP = Random.Range(0.0f, 100.0f);
-			if (randTMP <= ChanceDeJouer)
+			if (_realTimer <= 0.0f)
 			{
-				if (SoundManager.Instance.CanIPlaySound(gameObject))
+				float randTMP = Random.Range(0.0f, 100.0f);
+				if (randTMP <= ChanceDeJouer)
 				{
-					SoundManager.Instance.PlaySfx(gameObject, listCopy[0], 1.0f, true, 10.0f, false);
-					listCopy.Remove(listCopy[0]);
+					if (SoundManager.Instance.CanIPlaySound(gameObject))
+					{
+						SoundManager.Instance.PlaySfx(gameObject, listCopy[0], 1.0f, true, 10.0f, false);
+						listCopy.Remove(listCopy[0]);
+					}
 				}
+			}
+			else
+			{
+				_realTimer -= Time.deltaTime;
 			}
 		}
 	}
