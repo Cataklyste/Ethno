@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Ethno/Assets/Graph/Modelisations/waterfall.mtl.meta
 guid: e26e3a035a679664ca5ab354b67de7ae
 timeCreated: 1454223668
+=======
+guid: 34afe0343d6b3654293dac579d927a72
+timeCreated: 1454221312
+>>>>>>> 02999786c16d9c6de6658cc1a8bec44c9dc16a6d:Ethno/Assets/Graph/Modelisations/waterfall.mtl.meta
 licenseType: Free
 DefaultImporter:
   userData: 

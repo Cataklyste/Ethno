@@ -7,9 +7,12 @@ public class CirculareMenu : MonoBehaviour {
 
     [SerializeField]
     private GameObject ButtonPrefab;
+	[SerializeField]
+	private GameObject blanc;
 
-    private RectTransform rectTransf;
-    private List<MenuButton> buttons;
+	private RectTransform rectTransf;
+	private RectTransform rectTransf2;
+	private List<MenuButton> buttons;
 
     [SerializeField]
     private int buttonSize = 75;
@@ -22,13 +25,16 @@ public class CirculareMenu : MonoBehaviour {
 
     public IA ia;
 
+	private List<GameObject> gg = new List<GameObject>();
+
 	// Use this for initialization
 	void Start ()
     {
         playerValue = 0;
         rectTransf = transform as RectTransform;
+		rectTransf2 = transform as RectTransform;
 
-        buttons = new List<MenuButton>();
+		buttons = new List<MenuButton>();
 
         //for (int i = 0; i < 3; i++ )
         //{
@@ -43,8 +49,6 @@ public class CirculareMenu : MonoBehaviour {
 
     void OnEnable()
     {
-		
-
 		if (buttons != null && buttons.Count > 3)
         {
             Vector2 orientation = Vector2.up * buttonDistance;
@@ -57,19 +61,41 @@ public class CirculareMenu : MonoBehaviour {
 
             for (int i = 0; i < buttons.Count; i++)
             {
-                RectTransform rect = buttons[i].transform as RectTransform;
+	            GameObject img = new GameObject();
+	            img.AddComponent<Image>();
+				img.transform.SetParent(blanc.transform);
+
+	            gg.Add(img);
+
+				RectTransform rect2 = img.transform as RectTransform;
+				rect2.gameObject.SetActive(true);
+				rect2.offsetMax = Vector2.one * buttonSize;
+				rect2.offsetMin = Vector2.zero;
+				rect2.anchoredPosition = rectTransf2.anchoredPosition + orientation;
+
+				RectTransform rect = buttons[i].transform as RectTransform;
                 rect.gameObject.SetActive(true);
                 rect.offsetMax = Vector2.one * buttonSize;
                 rect.offsetMin = Vector2.zero;
                 rect.anchoredPosition = rectTransf.anchoredPosition + orientation;
                 orientation = Rotate(orientation, angle);
-            }
+
+				
+
+			}
         }
     }
 
     void OnDisable()
     {
-        for (int i = 0; i < buttons.Count; i++)
+	    foreach (GameObject g in gg)
+	    {
+		    Destroy(g);
+	    }
+
+		gg.Clear();
+
+		for (int i = 0; i < buttons.Count; i++)
         {
             RectTransform rect = buttons[i].transform as RectTransform;
 			rect.gameObject.SetActive(false);

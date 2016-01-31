@@ -22,12 +22,13 @@ public class CharacterMove : MonoBehaviour
 	private NavMeshPath _path;
 	private int _indexPath = 1;
 
-	protected bool _reatchTarget = false;
+	protected bool _reatchTarget = true;
 
 	[SerializeField]
 	private Animator anim;
 
 	private float someScale;
+
 	#endregion
 
 #region MonoBehaviours
@@ -36,7 +37,8 @@ public class CharacterMove : MonoBehaviour
 	public virtual  void Start()
 	{
 		_path = new NavMeshPath();
-		someScale = transform.localScale.x;
+
+		someScale = anim.gameObject.transform.localScale.x;
 	}
 
 
@@ -50,7 +52,7 @@ public class CharacterMove : MonoBehaviour
 #region Private Methods
 	public void MovePosition(Vector3 position)
 	{
-		if (Vector3.Distance(transform.position, position) < 1f)
+		if (Vector3.Distance(transform.position, position) < 0.25f)
 			return;
 
 		UpdatePath(position);
@@ -73,10 +75,12 @@ public class CharacterMove : MonoBehaviour
 
 		Vector3 dir = _path.corners[_indexPath] - transform.position;
 		directionToMove = new Vector3(dir.x, 0f, dir.z);
+
 		if (directionToMove.x + transform.position.x <= transform.position.x)
-			transform.localScale = new Vector3(someScale, transform.localScale.y, transform.localScale.z);
+			anim.gameObject.transform.localScale = new Vector3(someScale, anim.gameObject.transform.localScale.y, anim.gameObject.transform.localScale.z);
 		else
-			transform.localScale = new Vector3(-someScale, transform.localScale.y, transform.localScale.z);
+			anim.gameObject.transform.localScale = new Vector3(-someScale, anim.gameObject.transform.localScale.y, anim.gameObject.transform.localScale.z);
+
 		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > (directionToMove.normalized * Time.deltaTime * _speed).magnitude)
 		{
 			transform.Translate(directionToMove.normalized * Time.deltaTime * _speed);
