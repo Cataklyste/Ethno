@@ -297,7 +297,7 @@ public class IA : CharacterMove
 
 				++_index;
 				_player._circulareMenu.SUPER();
-				//_player.win = true;
+				_player.win = true;
 				return;
 			}
 
