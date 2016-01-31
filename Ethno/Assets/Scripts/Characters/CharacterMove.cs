@@ -15,7 +15,7 @@ public class CharacterMove : MonoBehaviour
 	[SerializeField] private List<string> _areas;
 
 	private int layermask;
-
+	public int inverse = 1;
 	private Vector3 directionToMove;
 	protected bool _haveToMove = false;
 	private NavMeshPath _path;
@@ -25,7 +25,7 @@ public class CharacterMove : MonoBehaviour
 
 	public bool win = false;
 	public bool loose = false;
-
+	public bool pasContent = false;
 	private float dTimeWin = 0f;
 	private float dTimeLoose = 0f;
 	private float dt = 0f;
@@ -66,6 +66,7 @@ public class CharacterMove : MonoBehaviour
 	public void StopMove()
 	{
 		_haveToMove = false;
+		_reatchTarget = true;
 	}
 
 	#endregion
@@ -82,9 +83,9 @@ public class CharacterMove : MonoBehaviour
 		directionToMove = new Vector3(dir.x, 0f, dir.z);
 
 		if (directionToMove.x + transform.position.x <= transform.position.x)
-			anim.gameObject.transform.localScale = new Vector3(someScale, anim.gameObject.transform.localScale.y, anim.gameObject.transform.localScale.z);
+			anim.gameObject.transform.localScale = new Vector3(someScale * inverse, anim.gameObject.transform.localScale.y, anim.gameObject.transform.localScale.z);
 		else
-			anim.gameObject.transform.localScale = new Vector3(-someScale, anim.gameObject.transform.localScale.y, anim.gameObject.transform.localScale.z);
+			anim.gameObject.transform.localScale = new Vector3(-someScale * inverse, anim.gameObject.transform.localScale.y, anim.gameObject.transform.localScale.z);
 
 		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > (directionToMove.normalized * Time.deltaTime * _speed).magnitude)
 		{
@@ -95,7 +96,6 @@ public class CharacterMove : MonoBehaviour
 			if (_path.corners.Length - 1 <= _indexPath)
 			{
 				StopMove();
-				_reatchTarget = true;
 			}
 			else
 			{
@@ -119,6 +119,12 @@ public class CharacterMove : MonoBehaviour
 			{
 				anim.SetTrigger("isFail");
 				loose = false;
+			}
+			else if (pasContent)
+			{
+				anim.SetTrigger("isPasContent");
+				pasContent = false;
+				StopMove();
 			}
 
 			anim.SetBool("isRunning", false);
