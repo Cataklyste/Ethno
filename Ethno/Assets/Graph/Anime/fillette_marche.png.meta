@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1df23c88ada417048ba63075b168a400
-timeCreated: 1454179905
+timeCreated: 1454210011
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -224,16 +224,6 @@ TextureImporter:
         y: 765
         width: 406
         height: 825
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: fillette_marche_16
-      rect:
-        serializedVersion: 2
-        x: 1927
-        y: 2086
-        width: 27
-        height: 266
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
