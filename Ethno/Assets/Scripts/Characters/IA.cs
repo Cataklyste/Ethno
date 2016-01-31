@@ -48,8 +48,8 @@ public class IA : CharacterMove
 
 	public float DistanceSound = 5f;
 
-	public float TimeQuestion = 2f;
-	public float TimeAnswern = 2f;
+	public float TimeQuestion = 0f;
+	public float TimeAnswern = 0f;
 
 	private bool Fear = false;
 	private bool haveIA = false;
@@ -90,15 +90,6 @@ public class IA : CharacterMove
 			if (!questionPosser)
 				AskingQuestion();
 
-			if (!_isHumain)
-			{
-				td += Time.deltaTime;
-				if (td >= TimeAnswern + TimeQuestion)
-				{
-					status = Status.NONE;
-					td = 0f;
-				}
-			}
 		}
 		else if (status == Status.LISEN)
 		{
@@ -200,6 +191,7 @@ public class IA : CharacterMove
 		if (_deltaQuestion >= TimeQuestion)
 		{
 			questionPosser = true;
+			if (_targetTalke)
 			_targetTalke.Question(iaValue);
 			word.gameObject.SetActive(false);
 		}
@@ -218,6 +210,9 @@ public class IA : CharacterMove
 
 	public void QuestionPlayer(Player player)
 	{
+		if (_player == null && status != Status.NONE)
+			EndTalk();
+
 		_player = player;
 		Fear = false;
 		_isHumain = true;
@@ -297,10 +292,12 @@ public class IA : CharacterMove
 				return;
 			}
 
+			//TODO ANIMATION
 			EndTalk();
 		}
 		else
 		{
+
 			//TODO ANIMATION
 			EndTalk();
 		}
@@ -317,7 +314,6 @@ public class IA : CharacterMove
 		}
 
 		_isHumain = false;
-
 	}
 
 	public void ResetIA()
@@ -326,7 +322,7 @@ public class IA : CharacterMove
 		{
 			haveIA = false;
 			if (_targetTalke)
-			_targetTalke.ResetIA();
+				_targetTalke.ResetIA();
 		}
 
 		word.gameObject.SetActive(false);
@@ -337,7 +333,6 @@ public class IA : CharacterMove
 		_deltaAnswer = 0f;
 		_GetQuestion = false;
 		_targetTalke = null;
-		haveIA = true;
 	}
 
     public void PlayerGoOut()
