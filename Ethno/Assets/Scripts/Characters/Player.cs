@@ -19,11 +19,6 @@ public class Player : CharacterMove
 	{
 		base.Start();
 
-<<<<<<< HEAD
-=======
-		_reatchTarget = true;
-
->>>>>>> a387b39b0ae8239cc88a76a9cfddbf23a8570a50
 		Cue[] tmp = GetComponents<Cue>();
 		for(int i = 0; i < tmp.Length; ++i)
 		{
