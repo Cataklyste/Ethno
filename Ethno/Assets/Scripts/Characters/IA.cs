@@ -41,6 +41,8 @@ public class IA : CharacterMove
 
 	public float DistanceSound = 5f;
 
+    public float offset;
+
 	public override void Start()
 	{
 		base.Start();
@@ -56,12 +58,16 @@ public class IA : CharacterMove
 	{
 		if (status == Status.NONE || status == Status.FOLLOW)
 		{
-			if (status != Status.FOLLOW)
-			{
-				RandomMove();
-			}
-			else
-				MovePosition(_player.transform.position);
+            if (status != Status.FOLLOW)
+            {
+                RandomMove();
+            }
+            else
+            {
+                Vector3 direction = _player.transform.position - transform.position;
+                direction.Normalize();
+                MovePosition(_player.transform.position - direction * offset);
+            }
 
 			base.Update();
 		}
@@ -230,6 +236,17 @@ public class IA : CharacterMove
 		_player = null;
 		_isHumain = false;
 	}
+
+    public void PlayerGoOut()
+    {
+        _index = 0;
+        status = Status.NONE;
+
+        word.gameObject.SetActive(false);
+
+        _player = null;
+        _isHumain = false;
+    }
 
 	void OnTriggerEnter(Collider other)
 	{
