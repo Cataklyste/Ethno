@@ -54,8 +54,6 @@ public class IA : CharacterMove
 	private bool Fear = false;
 	private bool haveIA = false;
 
-	private float td = 0;
-
     public float offset;
 
 
