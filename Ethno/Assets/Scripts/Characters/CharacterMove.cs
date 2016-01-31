@@ -28,6 +28,8 @@ public class CharacterMove : MonoBehaviour
 	private Animator anim;
 
 	private float someScale;
+	[SerializeField]
+	private GameObject SpriteToTurn;
 	#endregion
 
 #region MonoBehaviours
@@ -36,7 +38,7 @@ public class CharacterMove : MonoBehaviour
 	public virtual  void Start()
 	{
 		_path = new NavMeshPath();
-		someScale = transform.localScale.x;
+		someScale = SpriteToTurn.transform.localScale.x;
 	}
 
 
@@ -73,10 +75,12 @@ public class CharacterMove : MonoBehaviour
 
 		Vector3 dir = _path.corners[_indexPath] - transform.position;
 		directionToMove = new Vector3(dir.x, 0f, dir.z);
-		if (directionToMove.x + transform.position.x <= transform.position.x)
-			transform.localScale = new Vector3(someScale, transform.localScale.y, transform.localScale.z);
+
+		if (directionToMove.x + SpriteToTurn.transform.position.x <= SpriteToTurn.transform.position.x)
+			SpriteToTurn.transform.localScale = new Vector3(someScale, SpriteToTurn.transform.localScale.y, SpriteToTurn.transform.localScale.z);
 		else
-			transform.localScale = new Vector3(-someScale, transform.localScale.y, transform.localScale.z);
+			SpriteToTurn.transform.localScale = new Vector3(-someScale, SpriteToTurn.transform.localScale.y, SpriteToTurn.transform.localScale.z);
+
 		if (Vector3.Distance(positionToGo, _path.corners[_indexPath]) > (directionToMove.normalized * Time.deltaTime * _speed).magnitude)
 		{
 			transform.Translate(directionToMove.normalized * Time.deltaTime * _speed);
