@@ -21,24 +21,24 @@ public class Language : MonoBehaviour
     {
         List<int> tmp = new List<int>(words);
 
-        salut = tmp[Random.Range(0, tmp.Count - 1)];
+        salut = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(salut);
-		insulte = tmp[Random.Range(0, tmp.Count - 1)];
+		insulte = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(insulte);
-		oui = tmp[Random.Range(0, tmp.Count - 1)];
+		oui = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(oui);
-		non = tmp[Random.Range(0, tmp.Count - 1)];
+		non = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(non);
 
         tmp = new List<int>(words);
 
-		answerSalut = tmp[Random.Range(0, tmp.Count - 1)];
+		answerSalut = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerSalut);
-		answerInsulte = tmp[Random.Range(0, tmp.Count - 1)];
+		answerInsulte = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerInsulte);
-		answerOui = tmp[Random.Range(0, tmp.Count - 1)];
+		answerOui = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerOui);
-		answerNon = tmp[Random.Range(0, tmp.Count - 1)];
+		answerNon = tmp[Random.Range(0, tmp.Count)];
         tmp.Remove(answerNon);
 	}
 
