@@ -2,29 +2,37 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class MainMenu : MonoBehaviour
-{
+public class Credit : MonoBehaviour {
 
 	Image img;
+	private bool haveClicked, isInCredit;
+	public float fadeInFloat = 1.0f, fadeOutFloat = 1.0f;
+	public BoxCollider Bed;
 
-	private bool haveClicked;
 
-	public float fadeInFloat = 5.0f, fadeOutFloat = 5.0f;
-
-	// Use this for initialization
-	void Start()
-	{
+	void Start () {
 		img = GetComponent<Image>();
-		StartCoroutine(FadeIn());
 	}
+	
+	void Update () {
 
-	// Update is called once per frame
-	void Update()
-	{
-		if (Input.GetMouseButtonDown(0) && !haveClicked)
+		if (Input.GetMouseButtonDown(0) && !isInCredit)
 		{
-			StartCoroutine(FadeOut());
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit raycastHit;
+			if (Physics.Raycast(ray, out raycastHit))
+			{
+				if (raycastHit.collider == Bed as Collider)
+				{
+					img.enabled = true;
+					StartCoroutine(FadeIn());
+					isInCredit = true;
+				}
+			}
+
 		}
+		else if(Input.GetMouseButtonDown(0) && !haveClicked)
+			StartCoroutine(FadeOut());
 	}
 
 	IEnumerator FadeIn()
