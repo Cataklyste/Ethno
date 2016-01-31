@@ -45,15 +45,16 @@ public class CrossFade : MonoBehaviour {
         float time = 0.0f;
         float multiplier;
         fadeOutBaseVolume = fadeOut.GetComponent<AudioSource>().volume;
-	    while (time < timeCrossFade)
-	    {
-		    multiplier = 1.0f/timeCrossFade;
-		    fadeOut.GetComponent<AudioSource>().volume = 1 - multiplier*time;
 
-		    time += Time.deltaTime;
+        while (time < timeCrossFade)
+        {
+            multiplier = 1.0f / timeCrossFade;
+            fadeOut.GetComponent<AudioSource>().volume = 1 - multiplier * time;
 
-		    yield return null;
-	    }
+            time += Time.deltaTime;
+
+            yield return null;
+        }
     }
 
     void OnTriggerEnter(Collider other)
