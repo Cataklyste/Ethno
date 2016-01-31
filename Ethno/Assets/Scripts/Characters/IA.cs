@@ -232,7 +232,7 @@ public class IA : CharacterMove
 			_player = player;
 			status = Status.FOLLOW;
 			//player.newAIList.Add(this);
-			Debug.Log("Je passe + " + enumAI);
+
 			_player.ShowItem(enumAI);
 			return;
 		}
@@ -316,6 +316,7 @@ public class IA : CharacterMove
 			if (_isHumain)
 			{
 				_player.loose = true;
+				pasContent = true;
 			}
 
 			EndTalk();
