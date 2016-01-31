@@ -2,41 +2,53 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class MainMenu : MonoBehaviour {
+public class MainMenu : MonoBehaviour
+{
 
-    Image img;
+	Image img;
+
+	private bool haveClicked;
+
+	public float fadeInFloat = 5.0f, fadeOutFloat = 5.0f;
 
 	// Use this for initialization
-	void Start () {
-        img = GetComponent<Image>();
-        StartCoroutine(Fade());
+	void Start()
+	{
+		img = GetComponent<Image>();
+		StartCoroutine(FadeIn());
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-	
+	void Update()
+	{
+		if(Input.GetMouseButtonDown(0) && !haveClicked)
+			StartCoroutine(FadeOut());			
 	}
 
-    IEnumerator Fade()
-    {
-        float time = 0.0f;
+	IEnumerator FadeIn()
+	{
+		float time = 0.0f;
 
-        while (time < 5.0f)
-        {
-            time += Time.deltaTime;
-            img.color = Color.Lerp(new Color(1.0f,1.0f,1.0f,0.0f), Color.white, time / 5.0f);
-            yield return new WaitForEndOfFrame();
-        }
+		while (time < fadeInFloat)
+		{
+			time += Time.deltaTime;
+			img.color = Color.Lerp(new Color(1.0f, 1.0f, 1.0f, 0.0f), Color.white, time / fadeInFloat);
+			yield return new WaitForEndOfFrame();
+		}
 
-        yield return new WaitForSeconds(2.0f);
 
-        time = 0.0f;
+	}
+	IEnumerator FadeOut()
+	{
+		float time = 0.0f;
 
-        while (time < 5.0f)
-        {
-            time += Time.deltaTime;
-            img.color = Color.Lerp(Color.white, new Color(1.0f, 1.0f, 1.0f, 0.0f), time / 5.0f);
-            yield return new WaitForEndOfFrame();
-        }
-    }
+		haveClicked = true;
+
+		while (time < fadeOutFloat)
+		{
+			time += Time.deltaTime;
+			img.color = Color.Lerp(Color.white, new Color(1.0f, 1.0f, 1.0f, 0.0f), time / fadeOutFloat);
+			yield return new WaitForEndOfFrame();
+		}
+	}
 }

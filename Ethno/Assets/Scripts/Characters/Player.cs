@@ -61,12 +61,10 @@ public class Player : CharacterMove
 
 		if (_reatchTarget)
 		{
-			Debug.Log("TRUE");
 			EnableWalkSound(false);
 		}
 		else
 		{
-			Debug.Log("FALSE");
 			EnableWalkSound(true);
 		}
 	}
