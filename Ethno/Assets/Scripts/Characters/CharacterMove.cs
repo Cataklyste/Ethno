@@ -23,8 +23,14 @@ public class CharacterMove : MonoBehaviour
 
 	protected bool _reatchTarget = true;
 
-	[SerializeField]
-	private Animator anim;
+	public bool win = false;
+	public bool loose = false;
+
+	private float dTimeWin = 0f;
+	private float dTimeLoose = 0f;
+	private float dt = 0f;
+
+	public Animator anim;
 
 	private float someScale;
 
@@ -103,7 +109,20 @@ public class CharacterMove : MonoBehaviour
 	{
 		if(_reatchTarget)
 		{
+
+			if (win)
+			{
+				anim.SetTrigger("isWin");
+				win = false;
+			}
+			else if (loose)
+			{
+				anim.SetTrigger("isFail");
+				loose = false;
+			}
+
 			anim.SetBool("isRunning", false);
+
 		}
 		else
 		{

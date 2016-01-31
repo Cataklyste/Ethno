@@ -297,6 +297,7 @@ public class IA : CharacterMove
 
 				++_index;
 				_player._circulareMenu.SUPER();
+				//_player.win = true;
 				return;
 			}
 
@@ -305,8 +306,11 @@ public class IA : CharacterMove
 		}
 		else
 		{
+			if (_isHumain)
+			{
+				_player.loose = true;
+			}
 
-			//TODO ANIMATION
 			EndTalk();
 		}
 	}
