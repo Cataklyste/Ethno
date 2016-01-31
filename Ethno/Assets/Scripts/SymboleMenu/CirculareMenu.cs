@@ -48,7 +48,9 @@ public class CirculareMenu : MonoBehaviour {
 		if (buttons != null && buttons.Count > 3)
         {
             Vector2 orientation = Vector2.up * buttonDistance;
-            float angle = 360.0f / buttons.Count;
+            float angle = 330.0f / buttons.Count;
+
+            orientation = Rotate(orientation, 15.0f);
 
             if (buttons.Count % 2 == 0)
                 orientation = Rotate(orientation, angle / 2.0f);

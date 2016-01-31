@@ -1,0 +1,320 @@
+fileFormatVersion: 2
+guid: d7f8a7d1d1ff9e0468b35e27db396d67
+timeCreated: 1454199375
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: asie_marche_233.85_455.05_0
+    21300002: asie_marche_233.85_455.05_1
+    21300004: asie_marche_233.85_455.05_2
+    21300006: asie_marche_233.85_455.05_3
+    21300008: asie_marche_233.85_455.05_4
+    21300010: asie_marche_233.85_455.05_5
+    21300012: asie_marche_233.85_455.05_6
+    21300014: asie_marche_233.85_455.05_7
+    21300016: asie_marche_233.85_455.05_8
+    21300018: asie_marche_233.85_455.05_9
+    21300020: asie_marche_233.85_455.05_10
+    21300022: asie_marche_233.85_455.05_11
+    21300024: asie_marche_233.85_455.05_12
+    21300026: asie_marche_233.85_455.05_13
+    21300028: asie_marche_233.85_455.05_14
+    21300030: asie_marche_233.85_455.05_15
+    21300032: asie_marche_233.85_455.05_16
+    21300034: asie_marche_233.85_455.05_17
+    21300036: asie_marche_233.85_455.05_18
+    21300038: asie_marche_233.85_455.05_19
+    21300040: asie_marche_233.85_455.05_20
+    21300042: asie_marche_233.85_455.05_21
+    21300044: asie_marche_233.85_455.05_22
+    21300046: asie_marche_233.85_455.05_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: asie_marche_233.85_455.05_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3383
+        width: 357
+        height: 713
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_1
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 3383
+        width: 357
+        height: 713
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_2
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 3383
+        width: 357
+        height: 713
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_3
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 3383
+        width: 357
+        height: 713
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_4
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 3383
+        width: 334
+        height: 704
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 2669
+        width: 334
+        height: 706
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 2669
+        width: 334
+        height: 706
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_7
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 2669
+        width: 334
+        height: 706
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_8
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 2672
+        width: 332
+        height: 683
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_9
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 2672
+        width: 332
+        height: 683
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1960
+        width: 332
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_11
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 1960
+        width: 332
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1965
+        width: 337
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_13
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1965
+        width: 337
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_14
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 1965
+        width: 337
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1253
+        width: 337
+        height: 702
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_16
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1249
+        width: 341
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_17
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1249
+        width: 341
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_18
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 1249
+        width: 341
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_19
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1249
+        width: 341
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 541
+        width: 339
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_21
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 541
+        width: 342
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_22
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 541
+        width: 342
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: asie_marche_233.85_455.05_23
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 541
+        width: 342
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
