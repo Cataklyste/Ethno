@@ -28,6 +28,7 @@ public class CharacterMove : MonoBehaviour
 	private Animator anim;
 
 	private float someScale;
+
 	#endregion
 
 #region MonoBehaviours
@@ -36,6 +37,7 @@ public class CharacterMove : MonoBehaviour
 	public virtual  void Start()
 	{
 		_path = new NavMeshPath();
+
 		someScale = anim.gameObject.transform.localScale.x;
 	}
 
