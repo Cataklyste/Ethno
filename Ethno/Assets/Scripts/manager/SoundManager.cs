@@ -52,11 +52,8 @@ public class SoundManager : SingletonScript<SoundManager>
 
             _corutineDictionary.Add(gameObj, StartCoroutine(PlaySound(gameObj, audioSource)));
         }
-
-
         else
         {
-            Debug.Log("erohviudfh");
             AudioClip audioclip = _audioClips.Find(c =>
             {
                 if (c.name == soundName)
