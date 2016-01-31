@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using System.Collections.Generic;
 
 public class IA : CharacterMove
 {
@@ -57,6 +58,9 @@ public class IA : CharacterMove
 	private float td = 0;
 
     public float offset;
+
+
+	public EEthni enumAI;
 
 
 	public override void Start()
@@ -222,6 +226,9 @@ public class IA : CharacterMove
 			EndTalk();
 			_player = player;
 			status = Status.FOLLOW;
+			//player.newAIList.Add(this);
+			Debug.Log("Je passe + " + enumAI);
+			_player.ShowItem(enumAI);
 			return;
 		}
 

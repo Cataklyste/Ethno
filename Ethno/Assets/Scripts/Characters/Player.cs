@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class Player : CharacterMove
 {
+	
 	//TODO list IA follow
+	public List<EthniObject> ItemsBed;
+
 	private IA _AITarget = null;
 	private bool _active = false;
 	public CirculareMenu _circulareMenu;
@@ -28,6 +32,17 @@ public class Player : CharacterMove
 				CueSand = tmp[i];
 			else if (tmp[i].Type == CueType.DIRT)
 				CueDirt = tmp[i];
+		}
+	}
+
+	public void ShowItem(EEthni tmp)
+	{
+		for (int i = 0; i < ItemsBed.Count; ++i)
+		{
+			if(tmp == ItemsBed[i].tmp)
+			{
+				ItemsBed[i].GetComponent<SpriteRenderer>().enabled = true;
+			}
 		}
 	}
 
