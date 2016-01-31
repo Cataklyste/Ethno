@@ -9,7 +9,10 @@ public class SoundPlayerRandom : MonoBehaviour {
 
 	private List<string> listCopy;
 
-	public float TimerInstantiate = 0.3f;
+    public float VolumeSound = 0.5f;
+    public float Distance = 10.0f;
+
+    public float TimerInstantiate = 0.3f;
 	private float _realTimer;
 
 	[Range(0.0f, 100.0f)]
@@ -35,11 +38,11 @@ public class SoundPlayerRandom : MonoBehaviour {
 				{
 					if (SoundManager.Instance.CanIPlaySound(gameObject))
 					{
-						SoundManager.Instance.PlaySfx(gameObject, listCopy[0], 1.0f, true, 10.0f, false);
+						SoundManager.Instance.PlaySfx(gameObject, listCopy[0], VolumeSound, true, Distance, false);
 						listCopy.Remove(listCopy[0]);
 					}
 				}
-				_realTimer = TimerInstantiate;
+                _realTimer = TimerInstantiate;
 			}
 			else
 			{

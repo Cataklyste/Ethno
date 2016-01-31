@@ -82,13 +82,13 @@ public class Player : CharacterMove
 
 					if (_AITarget == null ||(_AITarget != null && tempAI != _AITarget))
 					{
-						_AITarget = tempAI;
+                        QuitConversation();
+                        _AITarget = tempAI;
 
 						_circulareMenu.ia = _AITarget as IA;
 						Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
 
 						MovePosition(position);
-						//QuitConversation();
 					}
 				}
 				else
@@ -108,6 +108,8 @@ public class Player : CharacterMove
 		_circulareMenu.ia = null;
 		_circulareMenu.SUPER();
 		_circulareMenu.gameObject.SetActive(false);
+        /*if (_AITarget)
+            _AITarget.PlayerGoOut();*/
 		_AITarget = null;
 		_active = false;
 	}
