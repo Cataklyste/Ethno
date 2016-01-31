@@ -45,13 +45,9 @@ public class Player : CharacterMove
 		}
 
 		if(_reatchTarget)
-		{
 			EnableWalkSound(false);
-		}
 		else
-		{
 			EnableWalkSound(true);
-		}
 	}
 
 	void EnableWalkSound(bool status)
@@ -80,22 +76,34 @@ public class Player : CharacterMove
 				{
 					IA tempAI = raycastHit.collider.gameObject.GetComponentInParent<IA>();
 
-					if (_AITarget == null ||(_AITarget != null && tempAI != _AITarget))
+					if (_AITarget == null)
 					{
-                        QuitConversation();
-                        _AITarget = tempAI;
-
-						_circulareMenu.ia = _AITarget as IA;
-						Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
-
-						MovePosition(position);
+						_AITarget = tempAI;
 					}
+					else if (_AITarget != null && tempAI != _AITarget)
+					{
+						_AITarget.RealiseYOU();
+						_AITarget = tempAI;
+					}
+					else if (_AITarget != null && tempAI == _AITarget)
+						return;
+
+					_AITarget.YouAreMind();
+
+					_circulareMenu.ia = tempAI;
+					Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
+
+					MovePosition(position);
 				}
 				else
 				{
 					Vector3 position = new Vector3(raycastHit.point.x, 0f, raycastHit.point.z);
 
 					MovePosition(position);
+
+					if (_AITarget)
+						_AITarget.RealiseYOU();
+
 					QuitConversation();
 				}
 			}
