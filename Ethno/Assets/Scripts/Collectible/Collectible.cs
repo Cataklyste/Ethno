@@ -8,6 +8,7 @@ public class Collectible : MonoBehaviour {
     private int value;
     [SerializeField]
     private Sprite image;
+    public GameObject prefab;
     
     private CirculareMenu menu;
 
@@ -33,6 +34,7 @@ public class Collectible : MonoBehaviour {
 			menu.AddButton(image, 1 << (value - 1), value);
             other.transform.FindChild("GameObject/UnlockedIcon").GetComponent<SpriteRenderer>().sprite = image;
             other.transform.FindChild("GameObject/UnlockedIcon").GetComponent<SignPreview>().ResetTimer();
+            SoundManager.Instance.PlaySfx(GameObject.Instantiate(prefab), "Sfx_Parchemin", 0.1f);
 			Destroy(this.gameObject);
 		}
 	}
