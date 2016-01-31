@@ -1,0 +1,683 @@
+fileFormatVersion: 2
+guid: fd2470fe7fc6d3a4b985dad127fe5463
+timeCreated: 1454233555
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: indien_repos_content_0
+    21300002: indien_repos_content_1
+    21300004: indien_repos_content_2
+    21300006: indien_repos_content_3
+    21300008: indien_repos_content_4
+    21300010: indien_repos_content_5
+    21300012: indien_repos_content_6
+    21300014: indien_repos_content_7
+    21300016: indien_repos_content_8
+    21300018: indien_repos_content_9
+    21300020: indien_repos_content_10
+    21300022: indien_repos_content_11
+    21300024: indien_repos_content_12
+    21300026: indien_repos_content_13
+    21300028: indien_repos_content_14
+    21300030: indien_repos_content_15
+    21300032: indien_repos_content_16
+    21300034: indien_repos_content_17
+    21300036: indien_repos_content_18
+    21300038: indien_repos_content_19
+    21300040: indien_repos_content_20
+    21300042: indien_repos_content_21
+    21300044: indien_repos_content_22
+    21300046: indien_repos_content_23
+    21300048: indien_repos_content_24
+    21300050: indien_repos_content_25
+    21300052: indien_repos_content_26
+    21300054: indien_repos_content_27
+    21300056: indien_repos_content_28
+    21300058: indien_repos_content_29
+    21300060: indien_repos_content_30
+    21300062: indien_repos_content_31
+    21300064: indien_repos_content_32
+    21300066: indien_repos_content_33
+    21300068: indien_repos_content_34
+    21300070: indien_repos_content_35
+    21300072: indien_repos_content_36
+    21300074: indien_repos_content_37
+    21300076: indien_repos_content_38
+    21300078: indien_repos_content_39
+    21300080: indien_repos_content_40
+    21300082: indien_repos_content_41
+    21300084: indien_repos_content_42
+    21300086: indien_repos_content_43
+    21300088: indien_repos_content_44
+    21300090: indien_repos_content_45
+    21300092: indien_repos_content_46
+    21300094: indien_repos_content_47
+    21300096: indien_repos_content_48
+    21300098: indien_repos_content_49
+    21300100: indien_repos_content_56
+    21300102: indien_repos_content_50
+    21300104: indien_repos_content_51
+    21300106: indien_repos_content_52
+    21300108: indien_repos_content_53
+    21300110: indien_repos_content_54
+    21300112: indien_repos_content_55
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: indien_repos_content_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7296
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_1
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 7296
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_2
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 7296
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_3
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 7296
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_4
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 7296
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_5
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 7296
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_6
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 7296
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_8
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 6400
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_9
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 6400
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_10
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 6400
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_11
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 6400
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_12
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 6400
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_13
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 6400
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5504
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_15
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 5504
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_16
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 5504
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_17
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 5504
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_18
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 5504
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_19
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 5504
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_20
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 5504
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4608
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_22
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 4608
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_23
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 4608
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_24
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 4608
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_25
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 4608
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_26
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 4608
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_27
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 4608
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3712
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_29
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 3712
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_30
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 3712
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_31
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 3712
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_32
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 3712
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_33
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 3712
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_34
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 3712
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2816
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_36
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 2816
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_37
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 2816
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_38
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 2816
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_39
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 2816
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_40
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 2816
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_41
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 2816
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_43
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1920
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_44
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 1920
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_45
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1920
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_46
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 1920
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_47
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 1920
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_48
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 1920
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_50
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1024
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_51
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 1024
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_52
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1024
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_53
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 1024
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_54
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 1024
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_55
+      rect:
+        serializedVersion: 2
+        x: 3222
+        y: 1024
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_content_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 535
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

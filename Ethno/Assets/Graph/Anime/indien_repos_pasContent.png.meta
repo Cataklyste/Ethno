@@ -1,0 +1,606 @@
+fileFormatVersion: 2
+guid: e9ef8f437ff84b14386f98b40922c9fe
+timeCreated: 1454233813
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: indien_repos_pasContent_0
+    21300002: indien_repos_pasContent_1
+    21300004: indien_repos_pasContent_2
+    21300006: indien_repos_pasContent_3
+    21300008: indien_repos_pasContent_4
+    21300010: indien_repos_pasContent_5
+    21300012: indien_repos_pasContent_6
+    21300014: indien_repos_pasContent_7
+    21300016: indien_repos_pasContent_8
+    21300018: indien_repos_pasContent_9
+    21300020: indien_repos_pasContent_10
+    21300022: indien_repos_pasContent_11
+    21300024: indien_repos_pasContent_12
+    21300026: indien_repos_pasContent_13
+    21300028: indien_repos_pasContent_14
+    21300030: indien_repos_pasContent_15
+    21300032: indien_repos_pasContent_16
+    21300034: indien_repos_pasContent_17
+    21300036: indien_repos_pasContent_18
+    21300038: indien_repos_pasContent_19
+    21300040: indien_repos_pasContent_20
+    21300042: indien_repos_pasContent_21
+    21300044: indien_repos_pasContent_22
+    21300046: indien_repos_pasContent_23
+    21300048: indien_repos_pasContent_24
+    21300050: indien_repos_pasContent_25
+    21300052: indien_repos_pasContent_26
+    21300054: indien_repos_pasContent_27
+    21300056: indien_repos_pasContent_28
+    21300058: indien_repos_pasContent_29
+    21300060: indien_repos_pasContent_30
+    21300062: indien_repos_pasContent_31
+    21300064: indien_repos_pasContent_32
+    21300066: indien_repos_pasContent_33
+    21300068: indien_repos_pasContent_34
+    21300070: indien_repos_pasContent_35
+    21300072: indien_repos_pasContent_36
+    21300074: indien_repos_pasContent_37
+    21300076: indien_repos_pasContent_38
+    21300078: indien_repos_pasContent_39
+    21300080: indien_repos_pasContent_40
+    21300082: indien_repos_pasContent_41
+    21300084: indien_repos_pasContent_42
+    21300086: indien_repos_pasContent_43
+    21300088: indien_repos_pasContent_44
+    21300090: indien_repos_pasContent_45
+    21300092: indien_repos_pasContent_46
+    21300094: indien_repos_pasContent_47
+    21300096: indien_repos_pasContent_48
+    21300098: indien_repos_pasContent_49
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: indien_repos_pasContent_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7296
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_1
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 7296
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_2
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 7296
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_3
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 7296
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_4
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 7296
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_5
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 7296
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_7
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 6400
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_8
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 6400
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_9
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 6400
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_10
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 6400
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_11
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 6400
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5504
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_13
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 5504
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_14
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 5504
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_15
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 5504
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_16
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 5504
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_17
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 5504
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4608
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_19
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 4608
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_20
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 4608
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_21
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 4608
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_22
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 4608
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_23
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 4608
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3712
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_25
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 3712
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_26
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 3712
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_27
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 3712
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_28
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 3712
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_29
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 3712
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2816
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_31
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 2816
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_32
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 2816
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_33
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 2816
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_34
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 2816
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_35
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 2816
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_37
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1920
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_38
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1920
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_39
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1920
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_40
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 1920
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_41
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 1920
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_43
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1024
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_44
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 1024
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_45
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1024
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_46
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 1024
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_47
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 1024
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: indien_repos_pasContent_49
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 128
+        width: 640
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
