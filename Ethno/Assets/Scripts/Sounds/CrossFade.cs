@@ -33,11 +33,9 @@ public class CrossFade : MonoBehaviour {
             fadeIn.GetComponent<AudioSource>().volume = multiplier * time;
 
             time += Time.deltaTime;
-            Debug.Log("in" + time);
 
             yield return null;
         }
-        Debug.Log("in time : " + time);
     }
 
     IEnumerator FadeOut()
@@ -47,19 +45,16 @@ public class CrossFade : MonoBehaviour {
         float time = 0.0f;
         float multiplier;
         fadeOutBaseVolume = fadeOut.GetComponent<AudioSource>().volume;
+
         while (time < timeCrossFade)
         {
             multiplier = 1.0f / timeCrossFade;
             fadeOut.GetComponent<AudioSource>().volume = 1 - multiplier * time;
 
             time += Time.deltaTime;
-            Debug.Log("out" + time);
 
             yield return null;
         }
-
-        Debug.Log("out time : " + time);
-
     }
 
     void OnTriggerEnter(Collider other)

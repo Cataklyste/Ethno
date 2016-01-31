@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using System.Collections.Generic;
 
 public class IA : CharacterMove
 {
@@ -55,6 +56,9 @@ public class IA : CharacterMove
 	private bool haveIA = false;
 
     public float offset;
+
+
+	public EEthni enumAI;
 
 
 	public override void Start()
@@ -227,6 +231,9 @@ public class IA : CharacterMove
 			EndTalk();
 			_player = player;
 			status = Status.FOLLOW;
+			//player.newAIList.Add(this);
+
+			_player.ShowItem(enumAI);
 			return;
 		}
 
@@ -297,6 +304,7 @@ public class IA : CharacterMove
 
 				++_index;
 				_player._circulareMenu.SUPER();
+				_player.win = true;
 				return;
 			}
 
@@ -305,8 +313,12 @@ public class IA : CharacterMove
 		}
 		else
 		{
+			if (_isHumain)
+			{
+				_player.loose = true;
+				pasContent = true;
+			}
 
-			//TODO ANIMATION
 			EndTalk();
 		}
 	}

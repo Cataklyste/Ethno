@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour {
     private int NombreIA = 0;
 
     public GameObject GO;
+	public EEthni enumTMP;
 
     private float SpawnRadius;
 
@@ -31,6 +32,7 @@ public class Spawner : MonoBehaviour {
 			GameObject tmp = GameObject.Instantiate(GO, this.transform.position + newPos, GO.transform.rotation) as GameObject;
 			tmp.transform.position = new Vector3(tmp.transform.position.x, 0, tmp.transform.position.z);
             tmp.GetComponent<IA>().language = GetComponent<Language>();
+			tmp.GetComponent<IA>().enumAI = enumTMP;
         }
     }
 }
