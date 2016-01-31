@@ -50,8 +50,8 @@ public class CrossFade : MonoBehaviour {
 
         while (time < timeCrossFade)
         {
-            multiplier = 1.0f / timeCrossFade;
-            fadeOut.GetComponent<AudioSource>().volume = 1 - multiplier * time;
+            multiplier = volumeMax / timeCrossFade;
+            fadeOut.GetComponent<AudioSource>().volume = volumeMax - multiplier * time;
 
             time += Time.deltaTime;
 
