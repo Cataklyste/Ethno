@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: 9352bf13d611a3f46ae9c4636f8b435d
+timeCreated: 1454212575
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fillette_Fail_0
+    21300002: fillette_Fail_1
+    21300004: fillette_Fail_2
+    21300006: fillette_Fail_3
+    21300008: fillette_Fail_4
+    21300010: fillette_Fail_5
+    21300012: fillette_Fail_6
+    21300014: fillette_Fail_7
+    21300016: fillette_Fail_8
+    21300018: fillette_Fail_9
+    21300020: fillette_Fail_10
+    21300022: fillette_Fail_11
+    21300024: fillette_Fail_12
+    21300026: fillette_Fail_13
+    21300028: fillette_Fail_14
+    21300030: fillette_Fail_15
+    21300032: fillette_Fail_16
+    21300034: fillette_Fail_17
+    21300036: fillette_Fail_18
+    21300038: fillette_Fail_19
+    21300040: fillette_Fail_20
+    21300042: fillette_Fail_21
+    21300044: fillette_Fail_22
+    21300046: fillette_Fail_23
+    21300048: fillette_Fail_24
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: fillette_Fail_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_1
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_2
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_3
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_4
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_5
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_6
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_7
+      rect:
+        serializedVersion: 2
+        x: 2989
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_8
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 3276
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_10
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_11
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_12
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_13
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_14
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_15
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_16
+      rect:
+        serializedVersion: 2
+        x: 2989
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_17
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 2453
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1630
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_19
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1630
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_20
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1630
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_21
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1630
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_22
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 1630
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_23
+      rect:
+        serializedVersion: 2
+        x: 2135
+        y: 1630
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fillette_Fail_24
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 1630
+        width: 420
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
